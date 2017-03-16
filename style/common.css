@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+ 
+/***公用***/ 
+
+
+.fw{
+    font-weight: bold;
+}
+
+.f-select{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.clear{
+    clear:both;
+}
+
+
+
+
+
+

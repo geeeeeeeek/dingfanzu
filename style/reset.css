@@ -1,0 +1,36 @@
+@charset 'UTF-8';
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu
+    {
+    margin: 0;
+    padding: 0;   
+}
+
+body {
+    background-color: #f7f7f7;
+    font: 14px "Microsoft Yahei UI","Microsoft YaHei",Helvetica,Arial,sans-serif;
+    color: #101010;
+     
+   /* min-width: 1000px;*/
+}
+
+.fl{
+    float: left;
+
+}
+.fr{
+    float:right;
+}
+
+div{ 
+    border:0px solid #555555;
+}
+
+img{
+    display:block;
+}

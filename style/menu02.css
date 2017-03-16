@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+ 
+
+.menu-left { 
+    width:200px;
+    height:inherit; 
+    padding: 16px 0; 
+    line-height: 32px;
+    margin: 20px 20px;
+    background-color: #fafafa;
+    border:1px #f5f5f5 solid;
+}
+
+.menu-left dt { 
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color:#333;
+    padding-left: 45px;
+}
+
+.menu-left dd a {
+    display: block;
+    height:36px;
+    line-height: 36px;
+    padding-left: 55px;
+    color: #333;
+}
+
+.menu-left dd a:hover,.menu-left dd.active a {
+    color: #333;
+    /*background: #ff2d4b url(../images/right_arrow.png) no-repeat 175px center;*/
+    background: #f0f0f0 ;
+}
+
+
+.menu-item{
+    position:relative;
+    margin-top: 1px;
+}
+
+.left-icon{
+    position:absolute;
+    left:25px;
+    top:8px;
+}

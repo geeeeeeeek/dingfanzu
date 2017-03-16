@@ -1,0 +1,44 @@
+body {
+    font-family: PingFang SC,Verdana,Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;
+}
+
+.content-wrap{
+    margin:100px auto 0px;
+    padding:20px;
+    width:500px;
+    background-color: #fff;
+}
+
+.content{ 
+
+}
+
+.w-title{
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin: 20px 0 20px;
+    text-align: center;
+}
+
+.w-title .w-title-right{
+    color: #f66c1c;
+}
+
+.w-qrcode{
+    display:block;
+    text-align: center;
+}
+
+.w-qrcode img{
+    margin:0 auto;
+}
+
+.w-footer{ 
+    display:block; 
+    margin-top: 40px;
+}
+
+.w-footer img{
+    margin:0 auto; 
+}

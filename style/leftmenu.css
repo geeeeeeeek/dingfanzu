@@ -1,0 +1,73 @@
+@chartset "UTF-8";
+
+
+
+
+.leftmenu{
+    position:fixed;
+    width:15%;
+    min-width: 180px;
+    left:0px;
+    top:55px;
+    line-height: 42px; 
+    background-color: #fafafa;
+    border-right:1px #eee solid;
+}
+
+.leftmenu dt { 
+    margin:20px 5px;
+    font-size: 18px;
+    padding: 10px 5px 10px 5px; 
+}
+
+.leftmenu dt span{
+    display:block; 
+}
+ 
+.leftmenu dt  .shop-icon{
+    width:72px;
+    height:72px; 
+    border-radius: 36px;
+    margin:0 auto;
+}
+
+.leftmenu dt .shop-name{
+    height:26px;
+    line-height:26px;
+    text-align: center; 
+    font-size:14px;  
+}
+
+.leftmenu dt .switch-address{
+    height:20px;
+    line-height:20px;
+    text-align: center;
+    color:red;
+    font-size:12px;  
+    cursor:pointer;
+}
+
+.leftmenu dt .switch-address a{ 
+    color:red; 
+}
+
+.leftmenu dd a {
+    display: block;
+    padding-left:30%;
+    font-size: 16px;
+    color: #555;
+}
+
+.leftmenu dd a:hover,.leftmenu dd.active a {
+    color: #fff;
+    background-color:#ff2d4b ;
+}
+
+.leftmenu .leftmenu-item{
+    margin-top: 1px;
+}
+
+
+.active{
+    background:#ff2d4b;
+}

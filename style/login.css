@@ -1,0 +1,170 @@
+
+
+.loginform, .registerform,.chpwdform{
+    width:70%;
+    margin:10px auto;
+    color:#222; 
+}
+
+
+.loginformfield {
+    width:100%; 
+    position: relative;
+    font-size: 14px;
+}
+
+.loginformfield .field-name{
+    display:inline-block;
+    height:32px;
+    line-height: 32px;
+    font-weight: bold;
+}
+
+.loginformfield .form-icon{
+    width:100%; 
+    display:block;
+    height:60px;
+}
+
+.loginformfield .form-icon img{
+    margin:0 auto;
+}
+
+.loginformfield .form-title{
+    display:block;
+    height:50px;
+    width:100%;
+    text-align: center; 
+}
+
+.loginformfield>span{
+    height:32px;
+    line-height: 32px; 
+}
+
+
+.loginformfield>input,.loginformfield>input[type=text] {
+    vertical-align: baseline;
+    border: 1px solid #cacaca;
+    box-sizing: border-box;
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    padding-left: 12px; 
+    border-radius: 2px; 
+    font-size: 14px;
+}
+
+.loginformfield>input:focus,.loginformfield>input[type=text]:focus {
+    border-color:#555555;
+    outline:0;
+}
+
+
+
+.passwordfield span,.phonefield span{
+    display:inline-block;
+    width:180px;
+}
+
+.loginformfield-hint { 
+    font-size: 12px;
+    line-height: 20px;
+    height: 20px;
+    margin-left: 2px;
+}
+.form-error{
+    color:red;
+}
+
+.fp{ 
+    float:right;
+    height:25px;  
+    text-align: right;
+}
+.fp .forget-password {  
+    display:inline-block; 
+    height:25px;
+    line-height: 25px; 
+    color:#f00;
+    font-size:14px; 
+    cursor:pointer;
+} 
+
+.loginform-buttons{
+    margin-top:10px;
+}
+
+.loginform-buttons .save-btn{
+    display:block; 
+    width:100%;
+    height:42px;
+    line-height: 42px;
+    padding:0;  
+    border:0;
+    text-align:center;
+    zoom:1;
+    *display:inline;
+    -webkit-transition:background-color .2s ease-in 0s;
+    -moz-transition:background-color .2s ease-in 0s;
+    -o-transition:background-color .2s ease-in 0s;
+    transition:background-color .2s ease-in 0s;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    font-size:16px;
+    color:#fff;
+    background-color:#ff2d4b;
+    cursor:pointer; 
+}
+
+.loginform-buttons .save-btn:hover,.loginform-buttons .save-btn:focus{ 
+    background-color:#e52843;  
+    border:0;
+}
+
+.loginform-buttons span{ 
+    text-align: center;
+    display:block;
+    width:100%;
+    height:36px;
+    line-height: 36px;
+    margin:10px 0;
+    border:0;
+}
+.loginform-buttons span a{ 
+    color:#f00;
+    cursor:pointer;
+}
+
+#register-confirm-code,#chpwd-confirm-code,#chpwd-confirm-code{
+    position:absolute;
+    left:0px;
+    top:32px;
+    width:68%;
+}
+.field-confirm-code{
+    height:95px;
+}
+.loginformfield-code-hint { 
+    position:absolute;
+    font-size: 12px;
+    line-height: 20px;
+    height: 20px;
+    left: 2px;
+    bottom: 0px;
+}
+
+.phone-code-btn {
+    position:absolute;
+    height:42px;
+    top:32px;
+    right:0px;
+    cursor:pointer;
+    box-sizing:border-box ;
+    width:30%;
+    border:1px solid #f63440;
+    color:#f63440;
+    background:#fff;
+    border-radius:2px;
+    outline:none;
+}

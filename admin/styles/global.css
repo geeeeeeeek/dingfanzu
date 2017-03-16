@@ -1,0 +1,86 @@
+img{
+	border:none;
+}
+
+a{
+	color:#00549D;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:underline;
+}
+
+.clear:after{ 
+	content:".";
+	display:block; 
+	height:0; 
+	visibility:hidden; 
+	clear:both;
+}
+	
+.clear{
+	zoom:1; 
+	clear:both;
+}
+
+
+
+/*商品相册*/
+
+#thumbs{
+	display:block;
+}
+
+#selectFileBtn{
+	width:108px;
+	height:28px;
+	float:left;
+	overflow:hidden;
+	text-indent:-9999px;
+	background:url(../images/attach.jpg);
+}
+
+#selectFileBtn:hover{
+	background-position:left -45px;
+}
+
+
+/*附件列表*/
+#attachList{
+	width:510px;
+	padding-top:5px;
+}
+
+/*附件项目元素*/
+
+.attachItem{
+	width:150px;
+	height:20px;
+	float:left;
+	padding:5px;
+	margin-right:10px;
+	margin-bottom:5px;
+	background:#E6ECF5;
+}
+
+.attachItem .left{
+	float:left;
+	display:inline;
+}
+
+.attachItem .right{
+	float:right;
+	display:inline;
+}
+
+.attachItem .right a{
+	display:block;
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:-9999px;
+	background:url(../images/delete.png);
+}
+
+
+

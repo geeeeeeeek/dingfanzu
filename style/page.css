@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+ 
+
+.page a {
+    /*text-decoration: none; 
+    color: #428bca;  
+    background: 0 0;
+    font-size: 14px;*/
+}
+
+.page a:hover {
+    /*text-decoration: underline;  */
+}

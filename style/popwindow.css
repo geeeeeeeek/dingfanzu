@@ -1,0 +1,57 @@
+.lpn_panel{
+    vertical-align: top;
+    margin:50px auto;
+    width:500px;
+    /*border:1px #f00 solid;*/
+}
+
+.lpn_panel .lpn_wrapper{
+    margin:50px auto;
+    width:450px;
+    border-top:2px #f00 solid; 
+    box-shadow: 0px 6px 16px 0px #9B9B9B;
+}
+ 
+ .panel-error{
+    padding: 20px 40px 20px;
+    min-width: 300px;
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+    font-size: 18px;   
+}
+
+.lpn_panel .lpn_wrapper .ft{
+    border-radius: 0;
+}
+.lpn_panel .lpn_wrapper .lpn_button_group{
+    padding: 25px 0 20px;
+    text-align: center;
+}
+.lpn_panel .lpn_wrapper .lpn_button_group button{
+    color: white;
+    height: 45px;
+    width: 30%;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0;
+    background: #f04848;
+    border: none; 
+    outline: none;
+    cursor:pointer;  
+}
+.lpn_panel .lpn_wrapper .lpn_button_group button:hover{   
+    background-color:#e52843;  
+}
+ 
+
+.lpn_close{ 
+    width:450px;
+    height:40px;
+    /*border: 1px #f00 solid;*/
+}
+.lpn_close img{
+    margin-left: 415px;
+    cursor:pointer;
+}
+ 

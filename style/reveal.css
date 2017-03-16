@@ -1,0 +1,99 @@
+/*	--------------------------------------------------
+	Reveal Modals
+	-------------------------------------------------- */
+	/****背景****/
+	.reveal-modal-bg { 
+		position: fixed; 
+		height: 100%;
+		width: 100%;
+		background: #000;
+		background: rgba(0,0,0,.6);
+		z-index: 100;
+		display: none;
+		top: 0;
+		left: 0; 
+		}
+	
+	.reveal-modal {
+		visibility: hidden;
+		position: absolute;
+		top: 56px; 
+		left: 50%;
+		margin-left: -300px;
+		width: 520px;
+		background: #fff  no-repeat -200px -80px;
+		z-index: 101;
+		border-radius: 2px;
+		padding: 30px 40px 34px; 
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		}
+		
+
+	
+	.close-reveal-modal {
+		font-size: 40px;
+		line-height: .5;
+		position: absolute;
+		top: 8px;
+		right: 11px;
+		color: #aaa;
+		font-weight: normal;
+		cursor: pointer;
+		} 
+
+
+    /*提示框开始*/
+	.alertModel{
+		visibility: hidden;
+		position: absolute;
+		top: 110px; 
+		left: 50%;
+		margin-left: -190px; /* 计算方式-(width/2+padding)*/
+		width: 300px;
+		background: #fff  no-repeat -200px -80px;
+		z-index: 101;
+		border-radius: 1px;
+		padding: 30px 40px 34px; 
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-box-shadow: 0 0 10px rgba(0,0,0,.4);
+	}
+
+	.alertModel span{
+		display:table;
+	    margin:10px auto 10px;
+		font-size:18px;
+	    color:#333;
+	}
+
+	.alertModel .btn{
+		display:block; 
+	    width:50%;
+	    height:42px;
+	    line-height: 42px;
+	    margin:20px auto 0;
+	    padding:0;  
+	    border:0;
+	    text-align:center;
+	    zoom:1;
+	    *display:inline;
+	    -webkit-transition:background-color .2s ease-in 0s;
+	    -moz-transition:background-color .2s ease-in 0s;
+	    -o-transition:background-color .2s ease-in 0s;
+	    transition:background-color .2s ease-in 0s;
+	    -moz-border-radius:2px;
+	    border-radius:2px;
+	    font-size:16px;
+	    color:#fff;
+	    background-color:#ff2d4b;
+	    cursor:pointer; 
+	}
+
+	.alertModel .btn:hover,.alertModel .btn:focus{ 
+	    background-color:#e52843;  
+	    border:0;
+	    outline:none;
+	}
+	/**提示框结束**/

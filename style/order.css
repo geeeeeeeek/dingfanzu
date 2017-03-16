@@ -1,0 +1,225 @@
+.order-content-wrap {
+    font-size:14px;
+    position:relative; 
+    width:90%;
+    margin:20px auto;
+}
+
+.order-content {
+    font-size:14px;
+    display:table;
+    table-layout:fixed;
+    position:relative; 
+    width:100%; 
+    margin-bottom:40px;
+}
+
+ .order-meal {
+    font-size:14px;
+    display:table-cell;
+    vertical-align:top;
+    border:1px solid #efefef;
+    border-right:0;
+    height:100%;
+    padding:5px 0;
+    position:relative;
+    color:#333;
+    width:50%
+}
+
+.order-meal>* {
+    width:90%;
+    margin:auto
+}
+
+.order-meal table th {
+    width:100%;
+    font-size:1.2em;
+    line-height:45px;
+    height:45px;
+    border-bottom:1px dashed #ddd;
+    text-align:left;
+    font-weight:400
+}
+.order-meal table th a {
+    color:#333
+}
+.order-meal table th .shop-info {
+    font-size:12px;
+    color:#000;
+    line-height:18px;
+    padding:0 0 12px
+}
+.order-meal table th .shop-info .phone-icon {
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    width:20px;
+    height:20px;
+    margin:0 3px -5px 0px;
+    background:url(../images/icon_phone.png) no-repeat
+}
+ 
+.order-meal table tr {
+    line-height:30px;
+    height:40px
+}
+.order-meal table td:nth-child(2n) {
+    text-align:right;
+    width:10%
+}
+.order-meal table td:nth-child(3n) {
+    text-align:right;
+    width:20%
+}
+.order-meal table .text-right {
+    text-align:right
+}
+
+.order-meal .shop-name {
+    font-size:14px;
+    -webkit-transition:color .2s ease-in 0s;
+    -moz-transition:color .2s ease-in 0s;
+    -o-transition:color .2s ease-in 0s;
+    transition:color .2s ease-in 0s
+}
+.order-meal .shop-name:hover {
+    color:#ff2d4b
+}
+.order-meal .order-price {
+    text-align:right;
+    height:40px;
+    line-height:40px;
+    margin-bottom:15px;
+    color:#999;
+    border-bottom:1px dashed #ddd;
+    padding-bottom:8px;
+}
+
+.order-meal .order-price .ft-red{
+    color:#f44642;
+}
+ 
+.order-meal .receive-info {
+    color:#999
+}
+.order-meal .receive-info span {
+    display:block;
+    line-height:28px
+}
+.order-meal .icon {
+    display:inline-block;
+    vertical-align:text-bottom;
+    width:20px;
+    height:20px;
+    background-repeat:no-repeat;
+    background-position:center
+}
+
+
+.order-info {
+    display:table-cell;
+    background:#fafafa;
+    font-size:14px;
+    width:50%;
+    color:#999;
+    padding:30px 0 30px;
+    position:relative;
+    border:1px solid #efefef;
+    border-left:0
+}
+.order-info>div {
+    width:90%;
+    margin:auto
+} 
+.order-info .delivery-card {
+    /*border:#ddd solid 1px;
+    border-radius:3px;*/
+    width:90%;
+    margin-bottom:20px;
+    margin-left:35px
+}
+.order-info .delivery-card .card-header {
+    display:table;
+    position:absolute
+} 
+.order-info .delivery-card .card-header .line-through {
+    height:74px;
+    left:-20px;
+    border-right:3px solid #64b93c;
+    bottom:-104px;
+    position:absolute;
+    z-index: 1;
+} 
+.order-info .delivery-card .card-header .round {
+    position:absolute;
+    top:12px;
+    left:-30px;
+    width:24px;
+    height:24px;
+    margin:auto; 
+
+    background:url(../images/round_24.png) no-repeat center
+}
+.order-info .delivery-card .card-body {
+    font-size:14px;
+    padding:10px 0;
+    padding-left:20px;
+    position:relative;
+    min-height:43px
+}
+.order-info .delivery-card .card-body .status-msg {
+    color:#333;
+    font-size:16px;
+    font-weight: bold; 
+}
+.order-info .delivery-card .card-body .prompt {
+    margin-top:2px;
+    font-size:13px
+}
+.order-info .delivery-card .card-body .time {
+    position:absolute;
+    top:12px;
+    right:20px
+}  
+.order-info .delivery-info {
+    padding-bottom:28px;
+    margin-top:0px
+}
+
+.operator-btns{
+    text-align: center;
+}
+ 
+.order-info .order-operator {
+    margin-top:100px
+}
+.order-info .order-operator .pay-btn {
+    display:inline-block;
+    margin:10px 10px 10px ;
+    width:100px;
+    height:30px;
+    padding:0;  
+    border:0;
+    text-align:center;
+    zoom:1;
+    *display:inline;
+    -webkit-transition:background-color .2s ease-in 0s;
+    -moz-transition:background-color .2s ease-in 0s;
+    -o-transition:background-color .2s ease-in 0s;
+    transition:background-color .2s ease-in 0s;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    font-size:1em;
+    color:#fff;
+    background-color:#ff2d4b;
+    cursor:pointer;
+    line-height:30px; 
+}  
+.order-info .order-operator button:hover, .order-info .order-operator .pay-btn:hover {
+    background-color:#e52843
+}
+  
+
+
+

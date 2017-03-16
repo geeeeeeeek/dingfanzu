@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+a{
+    text-decoration: none;
+    color:#fefefe;
+    font-size: 14px;
+}
+
+a:hover{
+    color:#eeeeee;
+}
+ 
+
+.f-radius{
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+
+.header{
+    position:fixed; 
+    top:0px;
+    width:100%;
+    min-width: 1000px;
+    height: 55px;
+    background-color: #f63440;
+    z-index: 5;
+}
+
+.shadow{
+    -moz-box-shadow: 0px 2px 4px #aaa;
+    -webkit-box-shadow: 0px 2px 4px #aaa;
+    box-shadow: 0px 2px 4px #aaa; 
+}
+ 
+.header .search-result{
+    display:none;
+    position:absolute;
+    top:55px;
+    left:158px;
+    width:300px;
+    background-color: #fff; 
+    border:1px #cacaca solid;
+    border-top: 0px #fff solid;
+    opacity:.99;
+}
+
+.header .search-result a{
+    display:block;
+    height:30px;
+    padding:5px 20px;
+    line-height: 30px;
+    font-size: 14px;
+    color:#b9a950;
+    cursor:pointer;
+    border-top: 1px #efefef solid;
+}
+
+.header .search-result a:hover{ 
+    color:#b9a950; 
+    background-color: #efefef;
+}
+
+.header-left{ 
+    height:inherit;     
+    line-height: 55px;  
+}
+
+
+.header-left .icon{ 
+    display:none;
+    width:34px;
+    height:25px; 
+    margin-top: 15px; 
+    margin-left: 10px;
+    margin-right: 5px;
+    background: url(../images/weixin_logo.png)  no-repeat;
+}
+
+.header-left .weixin-dingfan{ 
+    float:left; 
+    display:none;
+    height:55px;
+    line-height: 55px; 
+    margin-left: 5px;
+    margin-right: 5px; 
+    padding-right: 30px;
+    border-right: 1px #f85d66 solid;
+}
+
+.header-left .logo{   
+    float:left; 
+    display:inline-block;
+    width:101px;
+    height:28px;
+    margin-top:15px;
+    margin-left: 25px; 
+    cursor:pointer;
+    background: url(../images/header_logo.png)  no-repeat;
+}
+
+.header-left .search{
+    float:left;
+    height:55px; 
+    margin-left: 30px; 
+    padding-left: 10px;
+    border-left: 1px #f85d66 solid;
+    border-right: 1px #f85d66 solid;
+}
+
+.header-left .search .search-icon{
+    float:left;
+    display:inline-block;
+    margin-top:16px;
+}
+
+.header-left .search .search-input{ 
+    float:left;
+    color:#fefefe;
+    font-size: 14px; 
+    border: none;
+    outline:none;
+    background:none; 
+    width: 150px; 
+    height: 20px;
+    margin-top: 18px;
+    line-height: 20px;
+    padding-left: 10px;  
+}
+
+.header-left .search .search-del{
+    display:inline-block;
+    visibility: hidden;
+    margin-right: 10px;
+    height:55px;
+    line-height: 55px;
+    font-size:28px;
+    color:#cacaca;
+    opacity:.4;
+    cursor:pointer;
+}
+.header-left .search .search-del:hover{ 
+    opacity:.6;
+}
+
+
+//-----下面设置placeholder的颜色------
+.header-left input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fa9fa6;  
+}
+
+.header-left input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fa9fa6;
+}
+
+.header-left input:-ms-input-placeholder {
+    color: #fa9fa6;
+}
+
+.header-left input::-webkit-input-placeholder{
+    color: #fa9fa6;
+}
+
+
+.header-right{
+    height:inherit;
+    line-height: 55px;
+
+}
+
+
+.header-right .user,.header-right .cart{
+    height:inherit;
+    width:55px;  
+    cursor:pointer;
+}
+
+.header-right .cart{ 
+    margin-right: 20px;
+}
+
+.header-right .user:hover,.header-right .cart:hover{ 
+    background-color:#ac243d;
+}
+
+.header-right .user .user-icon{
+    margin-left: 16px;
+    margin-top: 16px;
+}
+.header-right .cart .cart-icon{
+    margin-left: 15px;
+    margin-top: 16px;
+}
+
+.header-operater{
+    display:inline-block;  
+}
+
+.header-operater a{ 
+    padding:0 15px;
+    cursor:pointer;
+    color:#fff;
+}
+
+.header-operater a:hover{
+    color:#eee; 
+}
+ 
+
+.title{
+    margin: 0 auto ;
+    width:260px;
+    line-height: 55px;
+    font-size: 25px; 
+    color:#fff;
+    text-align: center;
+}
+
+
+.navBtn{ 
+    padding:6px 26px; 
+    color:#fff;
+    background:none;
+    border:1px solid #fff;
+    margin:auto 10px; 
+    cursor:pointer;
+    font-size: 14px;
+    font-weight: bold; 
+}
+
+
+.navBtn:hover,.navBtn:visited{ 
+    background-color: #ac243d;
+    border: 1px solid #ac243d;
+}

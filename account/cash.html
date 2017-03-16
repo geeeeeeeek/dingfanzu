@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script src="/scripts/jquery-1.8.3.js"></script>
+        <script src="/scripts/jquery.reveal.js"></script>
+        <script src="/scripts/jquery.cookie.js"></script>
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon" /> 
+        <!--[if lte IE 10]>
+        <script src="/scripts/requestAnimationFrame.js"></script>
+        <![endif]-->
+        <link rel=stylesheet href="/style/reset.css">
+        <link rel=stylesheet href="/style/common.css">
+        <link rel=stylesheet href="/style/base.css">
+        <link rel=stylesheet href="/style/account.css">
+        <link rel=stylesheet href="/style/header.css">
+        <link rel=stylesheet href="/style/reveal.css">
+        <link rel=stylesheet href="/style/login.css">
+        <link rel=stylesheet href="/style/menu02.css">
+        <link rel=stylesheet href="/style/order.css">
+        <link rel=stylesheet href="/style/footer_2.css">
+        <link rel=stylesheet href="/style/cash.css"> 
+        <title>订饭组</title>
+    </head>
+    <body>
+        <!--header部分-->
+        <div class="header shadow">
+            <div class="header-left fl">
+                <div class="icon fl"></div>
+                <a class="fw" href="#">微信订饭</a>
+            </div>
+            <div class="header-right fr">
+                <div class="login fl">
+                    <span id="header-user" class="header-user fw n"> </span>
+                    <a id="header-login" class="navBtn f-radius f-select n" data-reveal-id="myModal" data-animation="fade">
+                    登录
+                    </a>
+                </div>
+                <div id="cart" class="cart fr"> 
+                    <img class="cart-icon" src="../images/icon_cart_22_22.png">
+                </div>
+                <div id="user" class="user fr ">
+                    <img class="user-icon" src="../images/icon_my.png"> 
+                </div> 
+            </div>
+            <div class="title">
+                订饭组|好吃 新鲜 干净
+            </div>
+            <ul id="subnav" class="subnav subnav-shadow n">
+                <li><a href="setting.html" target="">账号设置</a></li>
+                <li><a href="order.html" target="">我的订单</a></li>
+                <li><a href="balance.html" target="">我的余额</a></li>
+                <li><a href="cash.html" target="">代金券</a></li>
+                <li><a href="address.html" target="">我的地址</a></li>
+                <li><a id="sub-logout" href="" target="">退出</a></li>
+            </ul>
+        </div>
+        <!--主体-->
+        <div class="content">
+            <!--左侧导航-->
+            <div class="content-left fl">
+                <div class="menu-left">
+                    <dl>
+                        <dt>个人中心</dt>
+                        <dd class=""><a href="order">我的订单</a></dd>
+                        <dd class=""><a href="address">送餐地址</a></dd> 
+                        <dd class=""><a href="score">我的积分</a></dd>
+                        <dd class=""><a href="balance">我的余额</a></dd>
+                        <dd class=""><a href="setting">账户设置</a></dd>
+                    </dl>
+                </div>
+            </div>
+            <!--右侧内容-->
+            <div class="content-right fl">
+                <div class="summary fl">
+                    <h3 class="summary-header">代金券</h3>
+                    <div class="summary-info">
+                        <a class="ft-blk" href="">添加代金券</a>
+                        <span>|</span>
+                        <a class="ft-blk" href="">未使用(0)</a>
+                    </div>
+                </div>
+                <div class="cash">
+                    <ul>
+                        <li>
+                            <div class="fl account">
+                                <div class="money">
+                                    ¥<span class="value">6</span>
+                                </div>
+                            </div>
+                            <div class="fl details">
+                                <div class="txt">
+                                    限时代金券
+                                </div>
+                                <dl class="">
+                                    <dt>代金券号：</dt>
+                                    <dd>680015</dd>
+                                </dl>
+                                <dl class="">
+                                    <dt>适用商家：</dt>
+                                    <dd>齐鲁大厦</dd>
+                                </dl>
+                                <dl class="">
+                                    <dt>可用下单手机号：</dt>
+                                    <dd>13581651534</dd>
+                                </dl>
+                            </div>
+                            <div class="status">
+                                <div class="status-limit"> 
+                                        有效期: 1天 
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="fl account">
+                                <div class="money">
+                                    ¥<span class="value">6</span>
+                                </div>
+                            </div>
+                            <div class="fl details">
+                                <div class="txt">
+                                    限时代金券
+                                </div>
+                                <dl class="">
+                                    <dt>代金券号：</dt>
+                                    <dd>680015</dd>
+                                </dl>
+                                <dl class="clearfix">
+                                    <dt>适用商家：</dt>
+                                    <dd>齐鲁大厦</dd>
+                                </dl>
+                                <dl class="clearfix">
+                                    <dt>可用下单手机号：</dt>
+                                    <dd>13581651534</dd>
+                                </dl>
+                            </div>
+                            <div class="status">
+                                <div class="status-outdate">  
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="fl account">
+                                <div class="money">
+                                    ¥<span class="value">3</span>
+                                </div>
+                            </div>
+                            <div class="fl details">
+                                <div class="txt">
+                                    限时代金券
+                                </div>
+                                <dl class="">
+                                    <dt>代金券号：</dt>
+                                    <dd>680015</dd>
+                                </dl>
+                                <dl class="clearfix">
+                                    <dt>适用商家：</dt>
+                                    <dd>齐鲁大厦</dd>
+                                </dl>
+                                <dl class="clearfix">
+                                    <dt>可用下单手机号：</dt>
+                                    <dd>13581651534</dd>
+                                </dl>
+                            </div>
+                            <div class="status">
+                                <div class="status-used">  
+                                </div>
+                            </div>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="footer-content">
+              <div class="footer-content-entrance">
+                <a class="footer-content-link">关于我们</a>
+                <span class="footer-content-separator">|</span>
+                <a class="footer-content-link" >关注微博</a>
+                <span class="footer-content-separator">|</span>
+                <a class="footer-content-link footer-content-weixing">关注微信
+                <img class="weixin-pic" src="/images/qr_code.jpg">
+                </a>
+                <span class="footer-content-separator">|</span>
+                <a class="footer-content-link kaidian_address" >商家入驻</a>
+
+              </div>
+              <div class="footer-content-copyright">©2016 dingfanzu.com <a target="_blank">京ICP证020666号</a> </div>
+        </div>
+        <script src="/scripts/md5.js"></script>
+        <script src="/scripts/login.js"></script>   
+        <script src="/scripts/cart.lib.js"></script>
+        <script src="/scripts/cart.js"></script>
+        <script src="/scripts/header.js"></script>
+        <script src="/scripts/account.js"></script>
+        <script type="text/javascript">
+            $(function(){ 
+            });
+        </script>
+    </body>
+</html>

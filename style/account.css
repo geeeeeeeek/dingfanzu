@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+body{
+    background-color: #fff;
+}
+.content{
+    width:1100px;
+    margin:0 auto ;
+    padding-bottom: 100px;
+}
+
+.content-left{
+    width:200px;
+    height:600px;  
+    margin-top:55px;
+}
+
+.content-right{ 
+    width:900px; 
+    margin-top:55px;
+}
+
+.summary {   
+    border-bottom:1px solid #efefef;
+    height:60px;
+    width:90%;
+    line-height:60px; 
+    float:none;
+    margin:20px auto 40px;
+}
+ .summary .summary-header {
+    display:inline-block;
+    font-size:18px; 
+    font-weight: 400;
+    color:#333;
+}
+.summary .summary-info {
+    display:inline-block;
+    float:right;
+}
+.summary .summary-info span {
+    color:#ccc;
+    padding:0 5px;
+}
+.summary .summary-info .ft-blk {
+    font-size:14px;
+    color: #333 !important;
+}
+.summary .summary-info .ft-blk:hover {
+    color: #ff2d4b  !important;
+}
+
+.account-balance{
+    line-height: 40px;
+    margin-left: 55px; 
+}
+
+.account-balance span{
+    text-align: center;
+    font-size: 24px;
+    color:red;
+}
+
+.account-recharge{
+    margin:0px 15px;
+}
+
+.btn{
+    display:inline-block; 
+    width:300px;
+    height:42px;
+    line-height: 42px;
+    padding:0;  
+    border:0;
+    text-align:center;
+    zoom:1;
+    *display:inline;
+    -webkit-transition:background-color .2s ease-in 0s;
+    -moz-transition:background-color .2s ease-in 0s;
+    -o-transition:background-color .2s ease-in 0s;
+    transition:background-color .2s ease-in 0s;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    font-size:16px;
+    color:#fff;
+    background-color:#ff2d4b;
+    cursor:pointer; 
+}
+
+.btn:hover,.btn:focus{ 
+    background-color:#e52843;  
+    border:0;
+}
+
+.btn2 {
+    height:42px;
+    margin-left:8px;
+    cursor:pointer;
+    box-sizing:border-box ;
+    width:110px;
+    border:1px solid #f63440;
+    color:#f63440;
+    background:#fff;
+    border-radius:2px;
+    outline:none;
+}
+ .btn2:hover ,.btn2.focus{
+    border:1px solid #f63440;
+    background-color:#f63440;
+    color:#fff;
+}
+
+
+/************分页相关***********/
+.page{
+    display:table;
+    margin:20px auto;
+    color:#333;
+    font: 12px/1.5 宋体, arial, sans-serif;
+}
+
+.page-first,.page-end,.page-num,.page-pre,.page-next{
+    color:#f04646;
+    font: 12px/1.5 宋体, arial, sans-serif;
+}
+
+.page-first:hover,.page-end:hover,.page-num:hover,.page-pre:hover,.page-next:hover{
+    color:#fff;
+    background-color: #f04646;
+}
+/**********分页完成**********/
