@@ -8,7 +8,7 @@
     //发送验证码并返回结果
     function sendCode($pn,$code){
         $appkey="23385013";
-        $secret="fd4e22118e2d8d27fd8ac04578918f62";
+        $secret="";
 
         $c = new TopClient;
         $c->appkey = $appkey;
