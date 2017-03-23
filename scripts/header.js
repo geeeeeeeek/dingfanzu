@@ -24,9 +24,9 @@
 
     //load所有地点
     var places=$.cookie("places"); 
-    if(!places){ 
+    // if(!places){ 
         loadPlaces();
-    }
+    // }
 
     
     
@@ -38,6 +38,7 @@ function loadPlaces(){
     $.post(postUrl,  
         {},
         function(data,status,xhr) {    
+            console.log("header===加载地点"+data);
            if(status=="success"){  
                 $res= $.parseJSON(data); 
                 if($res.code=="0"){   
