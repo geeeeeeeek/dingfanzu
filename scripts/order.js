@@ -1,5 +1,6 @@
 (function($){
-    checkIfLogin();
+    checkIfLogin(); 
+         
 
     //初始化商家信息
     initShopInfo();
@@ -313,7 +314,7 @@ function commitOrder(){
     if(shopId){  
         var arrObj=selectAll(shopId);
         if(arrObj&&arrObj.length>0){ 
-            var itemsTxt=JSON.stringify(arrObj);
+            var itemsTxt=JSON.stringify(arrObj); 
             $.post(postUrl,  
             {
                 username:username,
@@ -329,20 +330,20 @@ function commitOrder(){
                 orderArrivedTime:orderArrivedTime,
                 orderRemark:orderRemark
             },
-            function(data,status,xhr) {   
-            alert(data);  
+            function(data,status,xhr) {    
+                console.log("order===data："+data);
                if(status=="success"){  
                     $res= $.parseJSON(data); 
-                    if($res.code=="0"){  
-                         alert("提交成功！提交方式："+paymethod);
+                    if($res.code=="0"){   
+                         console.log("order===提交方式："+paymethod);
                          //清空购物车
                          removeAllItem(shopId);
                           if(paymethod==0){ //微信支付   
                              window.location.href="/weixinPay.php";//pay.php页才能执行
                          }else if(paymethod==1){ //支付宝支付 
                              window.location.href="/aliPay.php";  //pay.php页才能执行
-                         }else if(paymethod==2){ //餐到付款
-                            showAlert("提交成功","/account/order");
+                         }else if(paymethod==2){ //餐到付款 
+                            window.location.href="/account/order";
                          }
                     }else if($res.code=="1"){
                         showAlert($res.msg); 
