@@ -23,7 +23,7 @@ body {
 
 /*头部*/
 .head{height: 60px; background-color: #4cace2; padding: 0 15px;}
-.logo{width: 101px; height: 28px;margin-top:15px; background: url(/images/header_logo.png) left center no-repeat;}
+.logo{width: 101px; height: 28px;margin-top:15px; background: url(/images/header_logo.png) left center no-repeat;cursor:pointer;}
 .head_text{height: 100%;margin-left: 20px; font:22px/60px "微软雅黑"; color: #FFF; }
 
 /*用户位置*/

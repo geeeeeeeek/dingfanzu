@@ -7,7 +7,7 @@ checkLogined();
 <html>
 <head>
 <meta charset="utf-8">
-<title>-.-</title> 
+<title>订饭组外卖订餐后台管理系统</title> 
 <link rel=stylesheet href="styles/reset.css">
 <link rel=stylesheet href="styles/bootstrap-admin.css"> 
 <link rel="stylesheet" href="styles/backstage.css">     
@@ -17,7 +17,7 @@ checkLogined();
 
 <body>
     <div class="head">
-            <div class="logo fl"></div>
+            <div class="logo fl" onclick="window.open('index.php','_self')"></div>
             <span class="head_text"></span>
     
         <!-- <div class="operation_user clearfix"> -->

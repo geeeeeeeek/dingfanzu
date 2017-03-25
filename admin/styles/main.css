@@ -353,7 +353,8 @@
 /*登陆*/
 .login_logo .comWidth{width:460px;}
 .welcome_title{font:22px/85px "Microsoft YaHei", "微软雅黑"; color:#FFF; float:left; padding-left:24px;}
-.loginBox{width:458px; border:#999 solid 1px; margin:50px auto 80px; position:relative;}
+.loginTip{width:458px; margin:30px auto 10px;position:relative;color:#0000ff;}
+.loginBox{width:458px; border:#999 solid 1px; margin:30px auto 50px; position:relative;}
 .login_cont{padding:15px 76px;}
 .l_tit{color:#666; line-height:20px;}
 .login_input{border:#999 solid 1px; height:32px; line-height:32px\9; text-indent:5px; width:100%;}

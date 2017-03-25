@@ -11,7 +11,7 @@ if(!empty($_COOKIE['adminId'])&&$_COOKIE['adminId']!=""){
 <link  rel="stylesheet" href="styles/reset.css">
 <link rel=stylesheet href="styles/bootstrap-admin.css"> 
 <link rel="stylesheet" href="styles/backstage.css">
-<link  rel="stylesheet" href="styles/main.css">
+<link  rel="stylesheet" href="styles/main.css?v=1">
 <!--[if IE 6]>
 <script type="text/javascript" src="../js/DD_belatedPNG_0.0.8a-min.js"></script>
 <script type="text/javascript" src="../js/ie6Fixpng.js"></script>
@@ -26,9 +26,13 @@ if(!empty($_COOKIE['adminId'])&&$_COOKIE['adminId']!=""){
     
 </div>
 
+<div class="loginTip">
+测试账号：admin 密码：admin
+</div>
+
 <div class="loginBox">
 	<div class="login_cont">
-	<form action="doLogin.php" method="post">
+		<form action="doLogin.php" method="post">
 			<ul class="login">
 				<li class="l_tit">管理员帐号</li>
 				<li class="mb_10"><input type="text"  name="username" placeholder="请输入管理员帐号"class="form-control"></li>
@@ -39,14 +43,14 @@ if(!empty($_COOKIE['adminId'])&&$_COOKIE['adminId']!=""){
 				<img src="getVerify.php" alt="" />
 				<li class="autoLogin"><input type="checkbox" id="a1" class="checked" name="autoFlag" value="1"><span class="checked-txt">一个月内自动登录</span></li>
 				<li><input type="submit" value="登录" class="btn btn-primary login-btn"></li>
-			</ul>
-		</form>
-	</div>
+			</ul> 
+		</form> 
+	</div> 
 </div>
 
 <div class="footer">
 	
-	<p>Copyright &copy; 2006 - 2014 xxx.com&nbsp;&nbsp;&nbsp;</p>
+	<p>Copyright &copy; 2015 - 2017 dingfanzu.com&nbsp;&nbsp;&nbsp;</p>
 	
 </div>
 </body>

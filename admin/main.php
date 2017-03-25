@@ -7,6 +7,13 @@
 </head>
 <body width="100%">
 <center>
+
+	<br>
+	<br>
+	<h3>本站已开源，源码地址：<a href="https://github.com/chanson1024/dingfanzu">https://github.com/chanson1024/dingfanzu</a>
+	</h3>
+	<br>
+	<br>
 	<h3>系统信息</h3>
 	<table width="70%" class="table  table-bordered table-hover">
 		<tr>
@@ -14,8 +21,8 @@
 			<td><?php echo PHP_OS;?></td>
 		</tr>
 		<tr>
-			<th>nginx版本</th>
-			<td>nginx 1.4.6</td>
+			<th>Nginx版本</th>
+			<td>Nginx 1.4.6</td>
 		</tr>
 		<tr>
 			<th>PHP版本</th>

@@ -23,6 +23,9 @@ function close($link){
  * @return number
  */
 function insert($table,$array){
+	if(DEBUG){
+		exit("无权限，如使用该权限，请联系客服微信（java2048）");
+	}
 	$link=connect();
 	$keys=join(",",array_keys($array));
 	$vals="'".join("','",array_values($array))."'";
@@ -41,6 +44,9 @@ function insert($table,$array){
  * @return number
  */
 function update($table,$array,$where=null){
+	if(DEBUG){
+		exit("无权限，如使用该权限，请联系客服微信（java2048）");
+	}
 	$link=connect();
 	foreach($array as $key=>$val){
 		if($str==null){
@@ -69,6 +75,9 @@ function update($table,$array,$where=null){
  * @return number
  */
 function delete($table,$where=null){
+	if(DEBUG){
+		exit("无权限，如使用该权限，请联系客服微信（java2048）");
+	}
 	$link=connect();
 	$where=$where==null?null:" where ".$where;
 	$sql="delete from {$table} {$where}";
