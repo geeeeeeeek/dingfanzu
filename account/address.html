@@ -205,7 +205,11 @@
                         var pn=my_GetValue("pn");
                         var block=my_GetValue("block");
                         var floor=my_GetValue("floor");
-                        $("#myFanzu,#place").html(place); 
+                        
+                        if(place){
+                            $("#myFanzu,#place").html(place); 
+                        }
+                        
                         $("#name").val(name);
                         $("#pn").val(pn);
                         $("#address-detail").val(addressDetail);

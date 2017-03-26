@@ -4,6 +4,9 @@ require_once '../../include.php';
 //模板路径
 $templateFile="../../template/template_shop.html";
 
+if(isset($_SESSION['adminName'])){
+    $adminName=$_SESSION['adminName'];
+}
 
 
  if(isset($_SESSION['shopId'])){
@@ -23,6 +26,7 @@ $myfile = fopen($shopFile, "w") or die("无法打开文件!");
 
 //--------------------组装店铺信息-----------------
 $sql="select * from dfz_shop where shopId='$shopId'"; 
+
 $row=fetchOne($sql);
 if($row){
     $shopInfoTxt="";
@@ -46,7 +50,7 @@ if($row){
  
 
 //--------------------组装左menu-------------------
-$sql="select * from dfz_cate where shopId='$shopId' order by weight asc"; 
+$sql="select * from dfz_cate where adminName='$adminName' order by weight asc"; 
 $rows=fetchAll($sql);
 if($rows){
     $leftMenuTxt="";

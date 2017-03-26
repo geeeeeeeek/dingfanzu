@@ -236,7 +236,11 @@
                 var name=my_GetValue("name");
                 var place=my_GetValue("place");
                 var email=my_GetValue("email"); 
-                $("#myFanzu").html(place);
+
+                if(place){
+                    $("#myFanzu").html(place);
+                }
+                
                 $("#pn").html(userId);
                 if(name&&name.length>0){ 
                     $("#name").val(name);

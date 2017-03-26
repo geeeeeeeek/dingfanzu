@@ -7,8 +7,8 @@ $verify=$_POST['verify'];
 $verify1=$_SESSION['verify'];
 $autoFlag=$_POST['autoFlag'];
 if($verify==$verify1){
-	$sql="select * from dfz_admin where username='{$username}' and password='{$password}'";
-	echo $sql;
+	$sql="select a.*,b.shopId from dfz_admin as a join dfz_shop as b where a.username='{$username}' and a.password='{$password}' and b.adminName='{$username}'";
+	 
 	$row=fetchOne($sql);
 	if($row){
 		//如果选了自动登陆，30天

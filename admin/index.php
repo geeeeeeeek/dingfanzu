@@ -182,7 +182,7 @@ checkLogined();
             $.post(postUrl, 
                 '', 
                 function(data, status, xhr) {  
-                   if(status=="success"){   
+                   if(status=="success"){    
                         $res= $.parseJSON(data); 
                         if($res.code=="0"){ // 
                             showAlert("提示","刷新成功");
