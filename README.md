@@ -1,7 +1,10 @@
 ## dingfanzu
 一个基于php+mysql的外卖订餐网站，包括前端和后台。  
 
-### 源码演示地址：<http://dingfanzu.com>
+### 源码演示地址：<http://dingfanzu.com>  
+
+### 商家后台系统：<http://dingfanzu.com/admin>
+* 测试账号：admin 密码：admin
 
 ### 运行环境：Apache+PHP+Mysql
 
@@ -9,6 +12,7 @@
 * htaccess Rewrite配置文件，需要放入到项目根目录
 * configs.php 需要配置数据库连接信息（主机、用户名、密码），系统常量等
 * data.sql 位于data目录中，是数据库备份文件，需要提前导入到mysql中
+* sendCode.php 短信接口，需要用到appkey和secret，可到alidayu.com申请。
 
 ### 技术架构：后台PHP+Mysql 前台jQuery、html、CSS、Bootstrap
 
