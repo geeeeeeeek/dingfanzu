@@ -55,11 +55,11 @@
             $('#register-pwd-error').text('密码不能为空');
             return;
         }  
-        // var md5Code=$.md5(code);
-        // if(md5Code!=code2){
-        //     $('#register-code-error').text('验证码不正确');
-        //     return;
-        // }
+        var md5Code=$.md5(code);
+        if(md5Code!=code2){
+            $('#register-code-error').text('验证码不正确');
+            return;
+        }
         create(phone,pwd,code);
     });
 
@@ -158,13 +158,13 @@
 })(jQuery);
 
 
-var leftSeconds=15;
+var leftSeconds=60;
 function setCodeTime(){  
     $('.phone-code-btn').attr('disabled',"true");
     $('.phone-code-btn').text(leftSeconds+"s");
     leftSeconds--;
     if(leftSeconds<0){
-        leftSeconds=15;
+        leftSeconds=60;
         $('.phone-code-btn').text("重新获取");
         $('.phone-code-btn').removeAttr("disabled");
     }else{
@@ -260,7 +260,6 @@ function getCode(pn){
     $.post(postUrl, 
         {phone:pn}, 
         function(data, status, xhr) {
-            alert(data);
            if(status=="success"){  
                 $res= $.parseJSON(data); 
                 if($res.code=="0"){  

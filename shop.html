@@ -914,8 +914,9 @@
                 <a class="weixin-dingfan fw" href="#">微信订饭</a>
                 <a class="logo" href="/"></a>
                 <div class="search">
-                <img class="search-icon" src="/images/icon_search.png" width="22" height="22">
-                <input class="search-input" type="text" placeholder="请输入楼名">
+                <img class="search-icon" src="/images/icon_search.png" width="20" height="20">
+                <input id="search-input" class="search-input" type="text" placeholder="请输入楼名" onkeypress="onKeySearch()">
+                <span id="search-del" class="search-del">&times;</span> 
                 </div>
                 <div class="clear"></div>
             </div>

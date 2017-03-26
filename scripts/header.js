@@ -69,7 +69,7 @@ function searchPlace(){
             var shopName=arrObj[i].shopName; 
             var shopId=arrObj[i].shopId;
             if(shopName.indexOf(keyword)>=0){ 
-                $(".search-result").append("<a href='/shop/"+shopId+".html'>"+shopName+"</a>");
+                $(".search-result").append("<a href='/shop.html'>"+shopName+"</a>");
                 $(".search-result").show(); 
             }
         }
