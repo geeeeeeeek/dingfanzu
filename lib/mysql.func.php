@@ -24,7 +24,9 @@ function close($link){
  */
 function insert($table,$array){
 	if(DEBUG){
-		exit("无权限，如使用该权限，请联系客服微信（java2048）");
+		if(strcmp($table,"dfz_user")!=0&&strcmp($table,"dfz_userinfo")!=0){ 
+			exit("无权限，如使用该权限，请联系客服微信（java2048）");
+		}
 	}
 	$link=connect();
 	$keys=join(",",array_keys($array));
