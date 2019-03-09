@@ -1,11 +1,6 @@
 ## dingfanzu
 一个基于php+mysql的外卖订餐网站，包括前端和后台。  
 
-### 源码演示地址：<http://dingfanzu.com>  
-
-### 商家后台系统：<http://dingfanzu.com/admin>
-* 测试账号：admin 密码：admin
-
 ### 运行环境：Apache+PHP+Mysql
 
 ### 代码说明
