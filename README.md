@@ -1,5 +1,6 @@
-## dingfanzu
-一个基于php+mysql的外卖订餐网站，包括前端和后台。  
+## 介绍
+
+一个基于php的外卖订餐网站，包括前端和后台。  
 
 ### 运行环境：Apache+PHP+Mysql
 
@@ -28,6 +29,15 @@
 * scripts 各种js文件
 * style 各种css文件
 
+### 界面预览
+
+##### 首页
+![](https://github.com/geeeeeeeek/dingfanzu/blob/master/images/demo01.png)
+
+##### 点餐页面
+![](https://github.com/geeeeeeeek/dingfanzu/blob/master/images/demo02.png)
+
+
 ### 赞助作者
 
-wx：285126081
+微信：lengqin1024
