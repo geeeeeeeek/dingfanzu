@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+
+
+.footer-content {
+    text-align: center;
+    width: 100%; 
+    height:50px;
+    margin:50px auto 20px;
+    padding:20px 0px;
+    border-top: 1px #d9d9d9 solid;
+}
+
+.footer-content-entrance {
+    position:relative;
+    width:600px;
+    margin:0 auto;
+    font-size: 16px;
+    color: #666;
+}
+
+.footer-content-copyright {
+    font-size: 12px;
+    color: #9b9b9b;
+    margin-top: 20px;
+}
+
+.footer-content-link {
+    color: #666;
+}
+.footer-content-link:hover {
+    color: #666;
+    cursor:pointer;
+    text-decoration: underline;
+}
+.footer-content-weixin{
+    position:relative;
+}
+ .weixin-pic{
+    position:absolute;
+    display: none; 
+    right: 295px; 
+    bottom: 18px;
+    width:120px;
+    height:120px;
+}
+
+.footer-content-separator {
+    margin: 0 20px;
+}
+
+
+.footer-content-copyright a {
+    color: #8A8A8A;
+    position: relative;
+}

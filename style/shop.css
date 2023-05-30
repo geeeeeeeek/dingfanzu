@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+body{
+    background-color: #fff;
+    overflow-y:scroll;
+}
+.gonggao-wrap{
+    position:fixed;  
+    top: 55px; 
+    background: #fff; 
+    height:40px;  
+}
+
+.gonggao { 
+    display:none;
+    position:fixed;
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #FFF5D5;
+    border: 1px solid #FED286;
+    line-height: 20px;
+    top: 65px; 
+    text-align: left;
+    overflow:hidden;
+}
+
+.gonggao b { 
+    font-weight: normal;
+    font-size: 12px;
+    color: #8b6b61; 
+}
+
+.content-middle{
+    position:absolute; 
+    top:90px;
+    background-color: #fff;
+}
+
+.menu-wrap{
+    margin-top:50px;
+    position:absolute;
+    background-color: #fff;
+}
+
+
+.content-middle .menu-item{
+    position:relative;
+    float:left;/*
+    border:1px #b3b3b3 solid;*/
+    /*width:48%;*/
+    height:160px; 
+}
+
+.menu-item .item-wrap{
+    position:relative;
+    background-color: #f7f7f7;
+    margin-left:22px; 
+    height:130px;
+    border:1px #f3f3f3 solid;
+}
+
+.menu-item .item-detail{
+    position:absolute; 
+    top:0px;
+    height:inherit;
+    width:100%;
+}
+
+.menu-item .item-detail .name{
+    display:inline-block;  
+    vertical-align: middle; 
+    height:38px; 
+    margin-left:140px;
+    margin-right:10px;
+    margin-top:10px; 
+    font-size: 14px;
+    font-weight: 700;
+}
+
+ 
+.menu-item .item-detail .price{ 
+    position:absolute;
+    /*right:50px;*/
+    bottom:5px;
+    display:inline-block;
+    line-height: 24px;
+    height:24px;
+    font-size: 15px;
+    color:#f00;
+}
+.menu-item .item-detail  .buy{
+    position:absolute;   
+    /*right:10px;*/
+    bottom:6px;
+    width:22px;
+    height:22px;
+    cursor:pointer;
+}
+
+/*.menu-item .item-detail  .stars{
+    position:absolute;   
+    display:inline-block;
+    
+    left:140px;
+    cursor:pointer;
+}
+
+.stars .full{
+    display:inline-block;
+    background:url(../images/icon_full_star.png) no-repeat;
+    width:20px;
+    height:20px;
+}*/
+
+.menu-item img{
+    margin-left: 0px;  
+}
+
+.u-flyer{
+    display: block; 
+    position: fixed;
+    z-index: 9999;
+}
+
+.stars{
+    position:absolute;   
+    display:inline-block;
+    /*bottom:15px;*/
+    left:140px;
+    /*cursor:pointer;*/
+}
+.stars li {
+    width: 20px;
+    height: 16px;
+    display: inline-block;
+    background: url(/images/icon_star_green.png);
+}
+.stars li.active {
+    background: url(/images/icon_star_red.png);
+}

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+.cash {
+    min-height: 200px;
+    width:90%;
+    margin:0 auto;
+}
+
+.cash li {
+    margin-top: 20px;
+    /*background-color: #ffb8b1;*/
+    position: relative;
+    height: 129px;
+}
+
+.cash .status {
+    position:absolute;
+    right:0px;
+    width: 230px;
+    height: 123px;
+    border-top: 1px solid #DCDCDC;
+    border-bottom: 1px solid #DCDCDC;
+    border-right: 1px solid #DCDCDC;
+    border-left: 1px dashed #DCDCDC;
+}
+
+.cash .status .status-limit {
+    font-size: 16px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.cash .status .status-outdate { 
+    width:120px;
+    height:120px;
+    margin: 0 auto;
+    background:url(../images/outdate.png) no-repeat;
+}
+.cash .status .status-used { 
+    width:120px;
+    height:120px;
+    margin: 0 auto;
+    background:url(../images/used.png) no-repeat;
+}
+
+.account {
+    color: #fff;
+    height: 125px;
+    width: 150px;
+    background: url(../images/icon_cash.png) no-repeat;
+}
+
+.account .money {
+    font-size: 26px;
+    line-height: 40px;
+    margin-top: 44px;
+    text-align: center;
+}
+.account .money .value {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.details {
+    height: 123px;
+    width: 50%;
+    padding-left: 35px;
+    color: #313131;
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #fff;
+}
+ .details .txt {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+    margin-top: 26px;
+    padding-bottom: 10px;
+}
+ .details dl {
+    line-height: 12px;
+    margin-top: 5px;
+}
+
+.details dt {
+    float: left;
+    color: #535353;
+}
+.details dd {
+    color: #898989;
+}
+.clearfix::after {
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+

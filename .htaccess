@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^localhost$ [NC]
+RewriteRule ^shop/([0-9]{4})$ shop/$1.html [L]
+RewriteRule ^account/(order)$ account/$1.php [L]
+RewriteRule ^account/([a-zA-Z]+)$ account/$1.html [L]

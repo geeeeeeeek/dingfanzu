@@ -1,0 +1,449 @@
+@charset=UTF-8;
+
+body{
+    background-color: #fff;
+}
+
+h2{ 
+    font-family: PingFang SC,Lantinghei SC,Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans;
+}
+
+.order-top-info{
+    color:#777;
+    width:1000px; 
+    margin:75px auto 15px;
+}
+.order-top-info .info-place{
+    color:#777;
+    cursor:pointer;
+}
+.order-top-info .info-place:hover{
+    color:#e00;
+    cursor:pointer;
+}
+
+.order-confirm-content{
+    position:relative; 
+    width:1000px; 
+    margin:10px auto 100px; 
+}
+
+
+.checkout-info{
+    float:left;
+    position:absolute;
+    width:360px; 
+    border:1px #dedede solid;
+    border-radius: 1px;
+    background-color: #fff;
+}
+
+.checkout-title{
+    display:block;
+    position: relative;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+.checkout-title h2{
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+.checkout-title a{
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    font-size: 12px;
+    color: #666;
+    cursor:pointer;
+}
+.checkout-tablehead{
+    display: table;
+    table-layout: fixed;/*
+    background-color: #fcfaf8;*/
+    height: 48px;
+    width:100%;
+    line-height: 48px;
+    font-size: 14px;
+    color: #999;
+    border-bottom: 1px solid #eee;
+}
+
+.cell{
+    float:left;
+    text-align: center;
+    vertical-align: middle;
+    display:table-cell;
+}
+.itemname{
+    width:60%;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    overflow: hidden;
+}
+.itemquantity{
+    width:10%;
+}
+.itemtotal{
+    width:25%;
+}
+
+.checkout-tablerow{
+    display: table;
+    table-layout: fixed;
+    background-color: #fcfaf8; 
+    width:100%; 
+    line-height: 48px;
+    font-size: 14px;
+    color: #999;
+}
+.checkout-bottom{
+    padding:40px 10px 10px 10px;
+    text-align: right;
+}
+.checkout-bottom span{
+    display:inline-block; 
+    color:#666;
+    font-size: 14px;
+}
+.checkout-bottom .checkout-bottom-price{
+    color:#f74342;
+    font-size: 20px;
+}
+
+.checkout-content{
+    float:right;
+    width:560px; 
+    border:1px #eee solid;
+    padding:20px 20px 50px 20px;
+    background-color: #fcfcfc;
+}
+
+.checkout-content h2 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.checkout-select{
+    position:relative;
+    padding-bottom:40px;
+}
+.checkout-ul{
+    display:block;
+    height:80px;
+}
+
+.checkout-jifen{
+    display:block;
+    height:40px; 
+    line-height: 40px;
+    border:1px #cacaca solid;
+    background-color: #fff;
+}
+
+.jifen-label{
+    display: inline-block;
+    margin-left: 20px;
+    color:#e5583c;
+    font-size: 14px;
+    text-align: right;
+    font-family: Microsoft Yahei;
+}
+.jifen-value{
+    display: inline-block;
+    position:absolute;
+    right:30px;
+    font-size: 14px;
+    text-align: right;
+    color:#e5583c;
+}
+.checkout-daijinjuan{ 
+    display:block;
+    display:none;
+    margin-top: 20px; 
+    padding:10px;
+    border:1px #f00 dotted;
+}
+.daijinjuan-ul{ 
+    display:inline-block; 
+}
+.daijinjuan-item{
+    text-align: center;
+    color: #fff;
+    height: 80px;
+    line-height: 80px;
+    width: 93px;
+    background: url(../images/icon_cash_small.png) no-repeat ; 
+}
+
+.daijinjuan-item span{ 
+    font-size: 36px;
+}
+
+.daijinjuan-value{ 
+    display: inline-block;
+    float:right; 
+    line-height: 80px;
+    font-size: 14px; 
+    color:#e5583c;
+}
+.liuyan-txt{
+    vertical-align: baseline;
+    border: 1px solid #cacaca;
+    box-sizing: border-box;
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 12px; 
+    border-radius: 1px; 
+    font-size: 14px;
+}
+.liuyan-txt:focus,.liuyan-txt[type=text]:focus {
+    border-color:#fcb7a2;
+    outline:0;
+}
+.checkout-noaddress,.checkout-noaddress:hover {
+    display: block;
+    line-height: 72px;
+    border:1px #fcb7a2 solid;
+    background: #fff;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    cursor:pointer;
+}
+.checkout-address,.checkout-address:hover { 
+    position:relative; 
+    height:72px;
+    border:1px #fcb7a2 solid;
+    background: #fff;
+    text-align: center;
+    font-size: 14px;
+    color: #666; 
+}
+.address-npa{
+    height:72px; 
+    line-height: 72px;
+    text-align: center;
+    font-size: 16px;
+    color: #666; 
+}
+.address-modify,.address-modify:hover{ 
+    position:absolute;
+    height:72px; 
+    line-height: 72px;
+    right:10px;
+    color:red;
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.checkout-pay {
+    float: left;
+    padding: 11px 0px; 
+    width: 175px;
+    height: 50px;
+    border: 2px solid #eee;
+    cursor: pointer; 
+    background-color: #fff;
+}
+
+.checkout-pay:hover{
+    border-color: #fcb7a2; 
+}
+
+.checkout-pay.active {
+    border-color: #fcb7a2;
+    background: url('../images/icon_pay_bg.png') #fff right bottom no-repeat;
+}
+
+.first,.second{
+    margin-right:10px;
+}
+.checkout-pay.disabled {
+    background: #fff;
+}
+.weixin-pay{
+    display:table; 
+    margin:auto auto;
+    font-size: 16px;
+    color:#555;
+    height:50px;
+    line-height: 50px;
+    padding-left: 50px;
+    background:url("../images/weixin_45_45.png") no-repeat left;
+}
+.alipay-pay{  
+    margin-left: 30px;
+    font-size: 16px; 
+    height:50px;
+    line-height: 50px;
+    padding-left: 60px;
+    background:url("../images/alipay_50.png") no-repeat left;
+} 
+.no-pay{ 
+    display:table;
+    margin:auto auto;
+    font-size: 16px;
+    color:#555;
+    height:50px;
+    line-height: 50px;
+    padding-left: 50px;
+    background:url("../images/no_pay_40_40.png") no-repeat left;
+}
+
+.checkout-select select {
+    border: 1px solid #cacaca; 
+    padding: 5px;
+    color: #777;
+    font-size: 14px;
+    width: 100%;
+    height:38px; 
+}
+.checkout-select select:focus {
+    border: 1px solid #fcb7a2;   
+    outline:0;
+}
+
+
+.commit-btn{
+    display:block; 
+    width:100%; 
+    height:42px;
+    line-height: 42px;
+    padding:0;  
+    border:0;
+    text-align:center;
+    zoom:1;
+    *display:inline;
+    -webkit-transition:background-color .2s ease-in 0s;
+    -moz-transition:background-color .2s ease-in 0s;
+    -o-transition:background-color .2s ease-in 0s;
+    transition:background-color .2s ease-in 0s;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    font-size:16px;
+    color:#fff;
+    background-color:#ff2d4b;
+    cursor:pointer; 
+}
+.commit-btn:hover,.commit-btn:focus{ 
+    background-color:#e52843;  
+    border:0;
+}
+
+
+//添加地址相关---
+.addressform{
+    width:70%;
+    margin:10px auto;
+    color:#222; 
+}
+.address-title{
+    display:block;
+    height:42px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 45px;
+    border-bottom: 1px #eee solid;
+}
+.addressformfield{
+    width:100%;
+    height:48px;
+    line-height: 48px;
+    margin:20px 0;
+    position: relative;
+    font-size: 14px;
+}
+.address-name,.address-pn,.address-detail{
+    float:left;
+    text-align: right; 
+    display:inline-block;
+    height:48px;
+    line-height: 48px;
+    width:60px; 
+    font-weight: bold;
+}
+
+.addressformfield>input,.addressformfield>input[type=text] {
+    vertical-align: baseline;
+    border: 1px solid #cacaca;
+    box-sizing: border-box;
+    width: 60%;
+    height: 42px;
+    margin-left: 12px;
+    line-height: 42px;
+    padding-left: 12px; 
+    border-radius: 2px; 
+    font-size: 14px;
+}
+
+.addressformfield>input:focus,.addressformfield>input[type=text]:focus {
+    border-color:#555555;
+    outline:0;
+}
+.detail-2{ 
+    position:relative;
+    display:inline-block;
+    margin-left: 12px;
+    width: 60%;   
+    font-size: 14px;
+}
+#place{ 
+    width:39%;
+}
+#address-detail {
+    position:absolute;
+    right: 0;
+    vertical-align: baseline;
+    border: 1px solid #cacaca;
+    box-sizing: border-box;  
+    height: 42px;
+    margin-left: 12px;
+    line-height: 42px;
+    padding-left: 12px; 
+    border-radius: 2px; 
+    font-size: 14px;
+}
+#address-detail:focus {
+    border-color:#555555;
+    outline:0;
+}
+.addressform-buttons{
+    margin-top:10px;
+    margin-bottom:30px;
+}
+.addressform-buttons .save-btn{
+    display:block; 
+    width:60%;
+    margin-left: 70px;
+    height:42px;
+    line-height: 42px;
+    padding:0;  
+    border:0;
+    text-align:center;
+    zoom:1;
+    *display:inline;
+    -webkit-transition:background-color .2s ease-in 0s;
+    -moz-transition:background-color .2s ease-in 0s;
+    -o-transition:background-color .2s ease-in 0s;
+    transition:background-color .2s ease-in 0s;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    font-size:16px;
+    color:#fff;
+    background-color:#ff2d4b;
+    cursor:pointer; 
+}
+.addressform-buttons .save-btn:hover,.addressform-buttons .save-btn:focus{ 
+    background-color:#e52843;  
+    border:0;
+}
+.error{
+    color:#f00;
+    margin-left: 10px;
+}
+
+//添加地址结束-----

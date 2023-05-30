@@ -1,0 +1,24 @@
+﻿#
+# robots.txt for dingfanzu
+#
+
+User-agent: *
+Disallow: /account/
+Disallow: /admin/
+Disallow: /ajax/
+Disallow: /api/
+Disallow: /configs/
+Disallow: /core/
+Disallow: /data/
+Disallow: /fonts/
+Disallow: /images/
+Disallow: /lib/
+Disallow: /scripts/
+Disallow: /style/
+Disallow: /taobao-sdk-PHP/
+Disallow: /template/
+Disallow: /pay.php
+Disallow: /pay2.php
+Disallow: /weixinPay.php
+Disallow: /order_confirm.html
+Disallow: /shop.html

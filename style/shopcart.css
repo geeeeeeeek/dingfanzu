@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+html,body{
+   /* height:100%;*/
+}
+ 
+.shadow{
+    -moz-box-shadow: 0px 4px 8px #ddd;
+    -webkit-box-shadow: 0px 4px 8px #ddd;
+    box-shadow: 0px 4px 8px #ddd; 
+}
+.shop-cart{  
+    position: fixed;  
+    width:22%; 
+    min-width: 200px;
+    height:5500px;
+    top:55px;
+    z-index: 2;
+    border-top:1px #ddd solid;
+    border-left:1px #ddd solid;
+    border-right:1px #ddd solid;
+    background-color: #fff;
+}
+.shop-head{
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    border-bottom: 1px #eee solid;
+    background-color: #f3f3f3;
+}
+.shop-head .shop-clear{
+    margin-left: 5px;
+    color:#f00;
+    cursor:pointer;
+}
+.shop-body{  
+    overflow-y :auto;
+}
+
+.shop-body .isnull{ 
+    display:none;
+    text-align: center;
+    margin-top:50px;
+}
+
+.shop-body .isnull span{
+    display:block;
+    margin:0 auto; 
+    width:128px;
+    height:128px;
+    background:url(../images/icon_isnull.png) no-repeat center;
+}
+.shop-body .isnull b{
+     font-size: 16px;
+     color:#cacaca;
+}
+
+.shop-item-wrap{ 
+    height:48px;
+    line-height: 48px;
+}
+.shop-item-wrap:hover{ 
+    background-color: #f5f5f5; 
+}
+.shop-item{
+    height:48px;
+    line-height: 48px;
+    margin:0 10px; 
+    font-size: 14px;
+    color:#555;
+    border-bottom: 1px #f5f5f5 solid; 
+} 
+
+.shop-item .item-name{
+    
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    overflow: hidden;
+}
+
+.shop-item .item-count{
+    width:90px;  
+    height:22px; 
+    margin-top:12px;
+    vertical-align: middle;
+    text-align: center; 
+} 
+ 
+.shop-item .item-count button {     
+    background-color: #fff;
+    height: 22px;
+    width: 22px;   
+    vertical-align: top;
+    border: 1px solid #ddd;
+    outline: 0;
+    cursor: pointer;
+    color: #666;
+}
+
+.shop-item .item-count input {    
+    border: 0; 
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    height: 20px;
+    line-height: 20px;
+    width: 30px; 
+    font-size:9pt; 
+    vertical-align: top;
+    text-align: center;
+    outline: 0;
+    color: #666;
+}
+
+.shop-item .item-price{
+    width:50px;
+    text-align: right;
+    color:red;
+}
+
+.shop-bottom{  
+    position:fixed;
+    bottom:0px; 
+    width:22%;
+    min-width: 200px;
+    height:50px;
+    line-height: 50px; 
+}
+
+.shop-bottom .bottom-price{
+    text-align: center;
+    width:65%;
+    font-size: 16px;
+    color:#eee; 
+    font-weight: bold;
+    background-color: #333;
+}
+
+.shop-bottom .bottom-icon{ 
+    position:absolute;
+    width:32px;
+    height:32px;
+    margin:8px 0px 0px 8px;
+    background:url(../images/icon_cart.png) no-repeat;
+}
+
+.shop-bottom .bottom-pay{ 
+    width:35%;
+}
+
+.shop-bottom .bottom-pay a{ 
+    width:100%;
+    display: inline-block;
+    text-align: center;
+    color:#fff;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ff2d4b;
+    cursor:pointer;
+}

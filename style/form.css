@@ -1,0 +1,112 @@
+
+
+.accountform {
+    width:50%;
+    margin:20px auto;
+    color:#333; 
+}
+
+.accountformfield {
+    position: relative;
+    padding-bottom: 25px;
+    font-size: 14px;
+}
+
+.accountformfield>label {
+    float: left;
+    display: inline-block;
+    width: 75px;
+    height: 38px;
+    margin-right: 20px;
+    line-height: 38px;
+    text-align: right; 
+}
+.accountformfield>span{
+    height:40px;
+    line-height: 38px; 
+}
+
+.accountformfield>input,.accountformfield>input[type=text] {
+    vertical-align: baseline;
+    border: 1px solid #dedede;
+    box-sizing: border-box;
+    width: 300px;
+    height: 42px;
+    line-height: 38px;
+    padding-left: 10px;
+    border-radius: 2px; 
+}
+
+.accountformfield>input:focus,.accountformfield>input[type=text]:focus {
+    border-color:#aaa;
+    outline:0;
+}
+
+
+.accountformfield button {
+    height:42px;
+    margin-left:8px;
+    cursor:pointer;
+    box-sizing:border-box ;
+    width:110px;
+    border:1px solid #f63440;
+    color:#f63440;
+    background:#fff;
+    border-radius:2px;
+    outline:none;
+}
+.accountformfield button:hover {
+    border:1px solid #f63440;
+    background-color:#f63440;
+    color:#fff;
+}
+
+.passwordfield span,.phonefield span{
+    display:inline-block;
+    width:180px;
+}
+
+.accountformfield-hint {
+    position: absolute;
+    font-size: 12px;
+    line-height: 20px;
+    bottom: 5px;
+    margin-left: 95px;
+}
+.form-error{
+    color:red;
+}
+ 
+.accountform-buttons {
+    margin-left: 95px;
+    margin-top: 10px;
+}
+
+
+.accountform-buttons .save-btn{
+    display:inline-block; 
+    width:300px;
+    height:42px;
+    line-height: 42px;
+    padding:0;  
+    border:0;
+    text-align:center;
+    zoom:1;
+    *display:inline;
+    -webkit-transition:background-color .2s ease-in 0s;
+    -moz-transition:background-color .2s ease-in 0s;
+    -o-transition:background-color .2s ease-in 0s;
+    transition:background-color .2s ease-in 0s;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    font-size:16px;
+    color:#fff;
+    background-color:#ff2d4b;
+    cursor:pointer; 
+}
+
+.accountform-buttons .save-btn:hover,.accountform-buttons .save-btn:focus{ 
+    background-color:#e52843;  
+    border:0;
+}
+
