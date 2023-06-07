@@ -9,15 +9,15 @@
 
 function checkIfLogin(){
     var userId=$.cookie('userId');
-    if(!userId){ 
-        location.href="/place.html";//跳到首页
+    if(!userId){
+        location.href="/index.html";//跳到首页
     }
 }
 
 
 //适配高度
 function processLeftHeight(){
-    var rightHeight=$(".content-right").height(); 
+    var rightHeight=$(".content-right").height();
     rightHeight-=40;
     var screenHeight=window.screen.height; //屏幕高
     if(rightHeight<screenHeight){

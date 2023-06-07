@@ -10,7 +10,7 @@
 
 	<br>
 	<br>
-	<h3>本站已开源，源码地址：<a href="https://github.com/chanson1024/dingfanzu">https://github.com/chanson1024/dingfanzu</a>
+	<h3>本站已开源，源码地址：<a href="https://github.com/geeeeeeeek/dingfanzu">https://github.com/geeeeeeeek/dingfanzu</a>
 	</h3>
 	<br>
 	<br>
@@ -21,8 +21,8 @@
 			<td><?php echo PHP_OS;?></td>
 		</tr>
 		<tr>
-			<th>Nginx版本</th>
-			<td>Nginx 1.4.6</td>
+			<th>Apache版本</th>
+			<td>2.4</td>
 		</tr>
 		<tr>
 			<th>PHP版本</th>
@@ -32,10 +32,14 @@
 			<th>运行方式</th>
 			<td><?php echo PHP_SAPI;?></td>
 		</tr>
+		<tr>
+			<th>开发者微信</th>
+			<td>lengqin1024</td>
+		</tr>
 	</table>
 </center>
 
-	<script src="../scripts/jquery-1.8.3.js"></script>  
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+	<script src="../scripts/jquery-1.8.3.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
 </html>

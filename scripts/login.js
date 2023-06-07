@@ -13,18 +13,18 @@
         $('#registerform').fadeIn(300);
     });
     //点击登录
-    $('#login').click(function(){ 
-        $('#registerform').hide(); 
+    $('#login').click(function(){
+        $('#registerform').hide();
         $('#loginform').fadeIn(300);
     });
     //点击忘记密码
     $('#forget-password').click(function(){
-        $('#loginform').hide(); 
+        $('#loginform').hide();
         $('#chpwdform').fadeIn(300);
     });
     //点击返回
     $('#back-login').click(function(){
-        $('#chpwdform').hide();  
+        $('#chpwdform').hide();
         $('#loginform').fadeIn(300);
     });
 
@@ -34,47 +34,40 @@
          $('#chpwdform').hide();
          $('#loginform').show();
     });
-  
+
 
     //注册账号
-    $('#create').click(function(){ 
+    $('#create').click(function(){
         var phone=$('#phone-2').val().trim();
-        var code=$('#register-confirm-code').val().trim();
-        var code2=$('#register-hid-code').val().trim();
         var pwd=$('#register-pwd').val().trim();
         $('#register-phone-error,#register-code-error,#register-pwd-error,#register-code-error').text("");
-        if(phone==""){ 
+        if(phone==""){
             $('#register-phone-error').text('手机号不能为空');
             return;
         }
-        if(code==""){ 
-            $('#register-code-error').text('验证码不能为空');
-            return;
-        }
+        // if(code==""){
+        //     $('#register-code-error').text('验证码不能为空');
+        //     return;
+        // }
         if(pwd==""){
             $('#register-pwd-error').text('密码不能为空');
             return;
-        }  
-        var md5Code=$.md5(code);
-        if(md5Code!=code2){
-            $('#register-code-error').text('验证码不正确');
-            return;
         }
-        create(phone,pwd,code);
+        create(phone,pwd,'');
     });
 
     //登录账号
-    $('#checkin').click(function(event){ 
-          if (event && event.preventDefault) {//如果是FF下执行这个 
-                event.preventDefault(); 
-            }else{  
-                window.event.returnValue = false;//如果是IE下执行这个 
+    $('#checkin').click(function(event){
+          if (event && event.preventDefault) {//如果是FF下执行这个
+                event.preventDefault();
+            }else{
+                window.event.returnValue = false;//如果是IE下执行这个
             }
-        
-        var phone=$('#phone-1').val().trim(); 
-        var pwd=$('#login-pwd').val().trim(); 
+
+        var phone=$('#phone-1').val().trim();
+        var pwd=$('#login-pwd').val().trim();
         $('#login-phone-error,#login-pwd-error').text("");
-        if(phone==""){ 
+        if(phone==""){
             $('#login-phone-error').text('手机号不能为空');
             return;
         }
@@ -90,16 +83,16 @@
         var phone=$('#phone-3').val().trim();
         var code=$('#chpwd-confirm-code').val().trim();
         var code2=$('#chpwd-hid-code').val().trim();
-        var pwd=$('#chpwd-pwd').val().trim(); 
+        var pwd=$('#chpwd-pwd').val().trim();
         $('#chpwd-phone-error,#chpwd-pwd-error,#chpwd-code-error').text("");
-        if(phone==""){ 
+        if(phone==""){
             $('#chpwd-phone-error').text('手机号不能为空');
             return;
         }
-        if(code==""){ 
+        if(code==""){
             $('#chpwd-code-error').text('验证码不能为空');
             return;
-        }  
+        }
         var md5Code=$.md5(code);
         if(md5Code!=code2){
             $('#chpwd-code-error').text('验证码不正确');
@@ -117,7 +110,7 @@
         //合法性
         var phone=$('#phone-2').val().trim();
         $('#register-phone-error').text("");
-        if(phone==""){ 
+        if(phone==""){
             $('#register-phone-error').text('手机号不能为空');
             return;
         }else if(isNaN(phone)){
@@ -126,9 +119,9 @@
         }else if(phone.length!=11){
             $('#register-phone-error').text('请输入11位手机号');
             return;
-        } 
+        }
         //倒计时
-        setCodeTime(); 
+        setCodeTime();
         getCode(phone);
     });
 
@@ -136,30 +129,30 @@
     $('#chpwd-code').click(function(){
         //合法性
         var phone=$('#phone-3').val().trim();
-        if(phone==""){ 
+        if(phone==""){
             $('#chpwd-phone-error').text('手机号不能为空');
             return;
         }else{
             $('#chpwd-phone-error').text("");
         }
         //倒计时
-        setCodeTime(); 
+        setCodeTime();
         getCode(phone);
     });
 
     //点击退出
-    $('#sub-logout').click(function(event) { 
-       event.preventDefault();  
+    $('#sub-logout').click(function(event) {
+       event.preventDefault();
         logout();
     });
-    
 
-    
+
+
 })(jQuery);
 
 
 var leftSeconds=60;
-function setCodeTime(){  
+function setCodeTime(){
     $('.phone-code-btn').attr('disabled',"true");
     $('.phone-code-btn').text(leftSeconds+"s");
     leftSeconds--;
@@ -168,29 +161,29 @@ function setCodeTime(){
         $('.phone-code-btn').text("重新获取");
         $('.phone-code-btn').removeAttr("disabled");
     }else{
-        setTimeout("setCodeTime()", 1000); 
+        setTimeout("setCodeTime()", 1000);
     }
 }
 
-function create(phone,pwd,code){ 
+function create(phone,pwd,code){
     var postUrl='/ajax/create.php';
 
-       $.post(postUrl, 
+       $.post(postUrl,
         {
             username:phone,
             password:pwd,
             code:code
-        }, 
-        function(data, status, xhr) { 
+        },
+        function(data, status, xhr) {
            if(status=="success"){ //注册成功
-                $res= $.parseJSON(data); 
-                if($res.code=="0"){  
+                $res= $.parseJSON(data);
+                if($res.code=="0"){
                     $('.close-reveal-modal').trigger('click');
                     $.cookie('userId',phone,{expires:30,path:'/'});//写cookie
                     var userId=$.cookie('userId');
                     $('#header-user').html('hi，'+userId);
                     $('#header-user').show();
-                    $('#header-login').hide(); 
+                    $('#header-login').hide();
                     $('#user').show();
                     //加载我的信息
                     loadMyInfo();
@@ -207,26 +200,26 @@ function create(phone,pwd,code){
 
 function checkin(phone,pwd){
 
-    var postUrl='/ajax/checkin.php'; 
-       $.post(postUrl, 
+    var postUrl='/ajax/checkin.php';
+       $.post(postUrl,
         {username:phone,
-         password:pwd}, 
-        function(data, status, xhr) { 
-           if(status=="success"){  
-                $res= $.parseJSON(data); 
+         password:pwd},
+        function(data, status, xhr) {
+           if(status=="success"){
+                $res= $.parseJSON(data);
                 if($res.code=="0"){  //登录成功
                     $('.close-reveal-modal').trigger('click');
                     $.cookie('userId',phone,{expires:30,path:'/'});//写cookie
                     var userId=$.cookie('userId');
                     $('#header-user').html('hi，'+userId);
                     $('#header-user').show();
-                    $('#header-login').hide(); 
+                    $('#header-login').hide();
                     $('#user').show();
                     //加载我的信息
                     loadMyInfo();
                 }else if($res.code=="1"){
                     $('#login-phone-error').text('该用户不存在');
-                }else if($res.code=="2"){ 
+                }else if($res.code=="2"){
                     $('#login-pwd-error').text('密码错误');
                 }
            }else{
@@ -236,14 +229,14 @@ function checkin(phone,pwd){
 }
 
 function chpwd(phone,pwd){
-    var postUrl='/ajax/chpwd.php'; 
-       $.post(postUrl, 
+    var postUrl='/ajax/chpwd.php';
+       $.post(postUrl,
         {username:phone,
-         password:pwd}, 
+         password:pwd},
         function(data, status, xhr) {
-           if(status=="success"){  
-                $res= $.parseJSON(data); 
-                if($res.code=="0"){  
+           if(status=="success"){
+                $res= $.parseJSON(data);
+                if($res.code=="0"){
                     $('.close-reveal-modal').trigger('click');
                 }else if($res.code=="1"){
                     alert($res.msg);
@@ -257,12 +250,12 @@ function chpwd(phone,pwd){
 //获取验证码
 function getCode(pn){
     var postUrl="/ajax/getCode.php";
-    $.post(postUrl, 
-        {phone:pn}, 
+    $.post(postUrl,
+        {phone:pn},
         function(data, status, xhr) {
-           if(status=="success"){  
-                $res= $.parseJSON(data); 
-                if($res.code=="0"){  
+           if(status=="success"){
+                $res= $.parseJSON(data);
+                if($res.code=="0"){
                     //放到隐藏域
                      $('#register-hid-code,#chpwd-hid-code').val($res.msg);
                 }else if($res.code=="1"){
@@ -274,18 +267,18 @@ function getCode(pn){
        });
 }
 
-function checkIfLogin(){ 
+function checkIfLogin(){
     var postUrl="/ajax/checkLogin.php";
-    $.post(postUrl, 
-        '', 
-        function(data, status, xhr) {  
-           if(status=="success"){   
-                $res= $.parseJSON(data); 
-                if($res.code=="0"){ //已登录 
-                    var userId=$.cookie('userId'); 
+    $.post(postUrl,
+        '',
+        function(data, status, xhr) {
+           if(status=="success"){
+                $res= $.parseJSON(data);
+                if($res.code=="0"){ //已登录
+                    var userId=$.cookie('userId');
                     $('#header-login').hide();
                     $('#user').show();
-                }else if($res.code=="1"){ //未登录 
+                }else if($res.code=="1"){ //未登录
                     $('#user').hide();
                     $('#header-login').show();
                 }
@@ -296,36 +289,36 @@ function checkIfLogin(){
 }
 
 function logout(){
-    var postUrl="/ajax/logout.php";  
-    $.post(postUrl,  
+    var postUrl="/ajax/logout.php";
+    $.post(postUrl,
         {},
-        function(data,status,xhr) {   
-           if(status=="success"){  
-                $res= $.parseJSON(data); 
-                if($res.code=="0"){ //退出成功 
-                      $.removeCookie('userId',{expires:7,path:'/'});//删除cookie 
+        function(data,status,xhr) {
+           if(status=="success"){
+                $res= $.parseJSON(data);
+                if($res.code=="0"){ //退出成功
+                      $.removeCookie('userId',{expires:7,path:'/'});//删除cookie
 
                       location.reload();
-                } 
+                }
            }else{
                 alert("服务器异常");
            }
-       }); 
+       });
 
 }
 
 //加载基本信息
 function loadMyInfo(){
      var username=$.cookie('userId');
-    if(username){ 
-        var postUrl="/ajax/loadMyInfo.php";   
+    if(username){
+        var postUrl="/ajax/loadMyInfo.php";
         //开始加载
-        $.post(postUrl,  
+        $.post(postUrl,
         {username:username},
-        function(data,status,xhr) {     
-           if(status=="success"){  
-                $res= $.parseJSON(data); 
-                if($res.code=="0"){  
+        function(data,status,xhr) {
+           if(status=="success"){
+                $res= $.parseJSON(data);
+                if($res.code=="0"){
                    my_SaveValue("userId",$res.data['username']);
                    my_SaveValue("pn",$res.data['phone']);
                    my_SaveValue("name",$res.data['name']);
@@ -334,10 +327,10 @@ function loadMyInfo(){
                    my_SaveValue("floor",$res.data['floor']);
                    my_SaveValue("jifen",$res.data['jifen']);
                    my_SaveValue("email",$res.data['email']);
-                } 
+                }
            }else{
                 alert("服务器异常");
            }
-       }); 
+       });
     }
 }

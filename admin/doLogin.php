@@ -6,7 +6,8 @@ $password=md5($_POST['password']);
 $verify=$_POST['verify'];
 $verify1=$_SESSION['verify'];
 $autoFlag=$_POST['autoFlag'];
-if($verify==$verify1){
+
+if($username){
 	$sql="select a.*,b.shopId from dfz_admin as a join dfz_shop as b where a.username='{$username}' and a.password='{$password}' and b.adminName='{$username}'";
 	 
 	$row=fetchOne($sql);
@@ -28,6 +29,4 @@ if($verify==$verify1){
 	}else{
 		alertMes("登陆失败，重新登陆","login.php");
 	}
-}else{
-	alertMes("验证码错误","login.php");
 }

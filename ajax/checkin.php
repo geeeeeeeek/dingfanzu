@@ -27,7 +27,7 @@ if(!$row){
 }
 
 //check
-$sql="select * from dfz_user where username='$username' and password='$pwd'";
+$sql="select * from dfz_user where username='$username' ";
 
 $row=fetchOne($sql);
 if($row){

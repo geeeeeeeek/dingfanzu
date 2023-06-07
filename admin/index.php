@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once '../include.php';
 checkLogined();
 
@@ -7,10 +7,10 @@ checkLogined();
 <html>
 <head>
 <meta charset="utf-8">
-<title>订饭组外卖订餐后台管理系统</title> 
+<title>外卖订餐后台管理系统</title>
 <link rel=stylesheet href="styles/reset.css">
-<link rel=stylesheet href="styles/bootstrap-admin.css"> 
-<link rel="stylesheet" href="styles/backstage.css">     
+<link rel=stylesheet href="styles/bootstrap-admin.css">
+<link rel="stylesheet" href="styles/backstage.css">
 
 
 </head>
@@ -19,17 +19,17 @@ checkLogined();
     <div class="head">
             <div class="logo fl" onclick="window.open('index.php','_self')"></div>
             <span class="head_text"></span>
-    
+
         <!-- <div class="operation_user clearfix"> -->
             <div class="link fr">
                 <b>欢迎您
-                <?php 
+                <?php
     				if(isset($_SESSION['adminName'])){
     					echo $_SESSION['adminName'];
     				}elseif(isset($_COOKIE['adminName'])){
     					echo $_COOKIE['adminName'];
-    				} 
-                ?> 
+    				}
+                ?>
                 </b>
                 <a href="/" class="">预览前台</a>
                 <a href="#" onclick="updatePage()" class="">刷新前台</a>
@@ -41,9 +41,9 @@ checkLogined();
         <div class="main">
             <!--右侧内容-->
             <div class="cont">
-      	 		<!-- 嵌套网页开始 -->         
+      	 		<!-- 嵌套网页开始 -->
                 <iframe src="main.php"  frameborder="0" name="mainFrame" width="100%" height="100%" scrolling="yes"></iframe>
-                <!-- 嵌套网页结束 -->   
+                <!-- 嵌套网页结束 -->
             </div>
         </div>
         <!--左侧列表-->
@@ -99,11 +99,11 @@ checkLogined();
                         <span class="menu-item-name">店铺管理</span>
                         </div>
                         <dl id="menu6" style="display:none;">
-                            <dd><a href="addShop.php" target="mainFrame" class="">添加店铺</a></dd> 
-                            <dd><a href="listShop.php" target="mainFrame" class="">店铺列表</a></dd> 
+                            <dd><a href="addShop.php" target="mainFrame" class="">添加店铺</a></dd>
+                            <dd><a href="listShop.php" target="mainFrame" class="">店铺列表</a></dd>
                         </dl>
                     </li>
-                    
+
                     <li>
                         <div class="menu-item-title" onclick="show('menu7','change7')">
                         <span  id="change7" class="menu-item-icon ico-open"></span>
@@ -132,36 +132,36 @@ checkLogined();
                     <p id="alert-body">内容</p>
                 </div>
                 <div class="modal-footer">
-                    <button id="btn-ok" type="button" class="btn btn-default" data-dismiss="modal">知道了</button> 
+                    <button id="btn-ok" type="button" class="btn btn-default" data-dismiss="modal">知道了</button>
                 </div>
             </div>
         </div>
     </div>
-    <audio id="player"> 
-        <source src="raw/bg_voice.mp3"> 
-    </audio> 
+    <audio id="player">
+        <source src="raw/bg_voice.mp3">
+    </audio>
 
-    <script src="scripts/jquery-1.8.3.js"></script> 
-    <script src="scripts/bootstrap.min.js"></script> 
-    <script src="scripts/common.js"></script> 
+    <script src="scripts/jquery-1.8.3.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/common.js"></script>
     <script type="text/javascript">
         $(function(){
-            $('.mList a').click(function(e) { 
+            $('.mList a').click(function(e) {
                 $('.title').text($(this).text());
                 $('.mList a').removeClass('active');
                 $(this).addClass('active');
             });
             isMSIE();
-            
+
             //轮询查订单
             setInterval("checkOrder()",5000);
         });
         //展开收缩
-    	function show(menu,change){  
+    	function show(menu,change){
 	    	      if($("#"+change).hasClass('ico-open')){
                     $("#"+change).removeClass('ico-open');
                     $("#"+change).addClass('ico-close');
-                  }else{ 
+                  }else{
                     $("#"+change).removeClass('ico-close');
                     $("#"+change).addClass('ico-open');
                   }
@@ -171,59 +171,59 @@ checkLogined();
         //判断浏览器
         function isMSIE(){
             var explorer=navigator.userAgent;
-            if(explorer.indexOf("MSIE") >= 0){ 
+            if(explorer.indexOf("MSIE") >= 0){
                 alert('请使用Chrome浏览器！');
             }
         }
 
         //生成html
-        function updatePage(){ 
+        function updatePage(){
             var postUrl="ajax/updatePage.php";
-            $.post(postUrl, 
-                '', 
-                function(data, status, xhr) {  
-                   if(status=="success"){    
-                        $res= $.parseJSON(data); 
-                        if($res.code=="0"){ // 
+            $.post(postUrl,
+                '',
+                function(data, status, xhr) {
+                   if(status=="success"){
+                        $res= $.parseJSON(data);
+                        if($res.code=="0"){ //
                             showAlert("提示","刷新成功");
-                        }else if($res.code=="1"){ // 
-                            
+                        }else if($res.code=="1"){ //
+
                         }
                    }else{
                         showAlert("提示","服务器异常，请联系平台人员");
                    }
                });
         }
- 
+
         //检查订单
-         function checkOrder(){ 
+         function checkOrder(){
             var shopId='<?php echo $_SESSION['shopId']?>';
             if(!shopId){
                 return;
             }
-            var requestUrl="checkOrder.php?shopId="+shopId; 
+            var requestUrl="checkOrder.php?shopId="+shopId;
 
            $.ajax({ url:requestUrl,
                     type:'post',
                     async:true,
                     timeout:3000,
-                    success:function(data){ 
-                        if(data=="success"){ 
+                    success:function(data){
+                        if(data=="success"){
                             playVoice();
-                        } 
+                        }
                     },
                     error:function(data){
                     }
                 });
         }
         //播放背景音
-        function playVoice(){ 
-            var audio = $("#player")[0];  
-            audio.play();  
+        function playVoice(){
+            var audio = $("#player")[0];
+            audio.play();
         }
 
-        
+
     </script>
-    
+
 </body>
 </html>

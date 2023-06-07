@@ -1,5 +1,5 @@
-<?php 
-define("DB_HOST","127.0.0.1");
+<?php
+define("DB_HOST","localhost");
 define("DB_USER","root");
 define("DB_PWD","4643830");
 define("DB_DBNAME","dfz");

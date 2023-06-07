@@ -1,5 +1,5 @@
 <?php
-if(!empty($_COOKIE['adminId'])&&$_COOKIE['adminId']!=""){ 
+if(!empty($_COOKIE['adminId'])&&$_COOKIE['adminId']!=""){
 	header("location:index.php");
 }
 ?>
@@ -9,7 +9,7 @@ if(!empty($_COOKIE['adminId'])&&$_COOKIE['adminId']!=""){
 <meta charset="utf-8">
 <title>登陆</title>
 <link  rel="stylesheet" href="styles/reset.css">
-<link rel=stylesheet href="styles/bootstrap-admin.css"> 
+<link rel=stylesheet href="styles/bootstrap-admin.css">
 <link rel="stylesheet" href="styles/backstage.css">
 <link  rel="stylesheet" href="styles/main.css?v=1">
 <!--[if IE 6]>
@@ -23,7 +23,7 @@ if(!empty($_COOKIE['adminId'])&&$_COOKIE['adminId']!=""){
 <div class="head">
             <div class="logo fl"><a href="#"></a></div>
             <span class="head_text">商家后台管理系统</span>
-    
+
 </div>
 
 <div class="loginTip">
@@ -43,15 +43,15 @@ if(!empty($_COOKIE['adminId'])&&$_COOKIE['adminId']!=""){
 				<img src="getVerify.php" alt="" />
 				<li class="autoLogin"><input type="checkbox" id="a1" class="checked" name="autoFlag" value="1"><span class="checked-txt">一个月内自动登录</span></li>
 				<li><input type="submit" value="登录" class="btn btn-primary login-btn"></li>
-			</ul> 
-		</form> 
-	</div> 
+			</ul>
+		</form>
+	</div>
 </div>
 
 <div class="footer">
-	
-	<p>Copyright &copy; 2015 - 2017 dingfanzu.com&nbsp;&nbsp;&nbsp;</p>
-	
+
+	<p>Copyright &copy; 2015 - 2017 &nbsp;&nbsp;&nbsp;</p>
+
 </div>
 </body>
 </html>

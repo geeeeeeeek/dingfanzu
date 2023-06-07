@@ -1,6 +1,6 @@
 (function($){
-    checkIfLogin(); 
-         
+    checkIfLogin();
+
 
     //初始化商家信息
     initShopInfo();
@@ -9,7 +9,7 @@
     //初始化地址
     initAddress();
     //初始化支付方式
-    initPayMethod();  
+    initPayMethod();
     //初始化积分
     initJifen();
     //初始化送达时间
@@ -23,9 +23,9 @@
     //提交订单
     $('.commit-btn').click(function(event) {
 
-        var paymethod=my_GetValue("paymethod"); 
-        
-        var price=$('.checkout-bottom-price').text();   //总价 
+        var paymethod=my_GetValue("paymethod");
+
+        var price=$('.checkout-bottom-price').text();   //总价
         var orderArrivedTime=$('.select-arrived-time').val(); //到货时间
         var orderRemark=$('.liuyan-txt').val(); //留言
         //存必要信息
@@ -44,7 +44,7 @@
 
     //支付方式切换
     $(".checkout-pay").click(function() {
-        if($(this).hasClass('disabled')){ 
+        if($(this).hasClass('disabled')){
             $(this).removeClass('disabled');
             $(this).addClass('active');
             $(this).siblings().removeClass('active');
@@ -52,34 +52,34 @@
         }
         //存cookie
         if($('.weixin-pay').parent().hasClass('active')){
-            my_SaveValue("paymethod","0"); 
+            my_SaveValue("paymethod","0");
         }else if($('.alipay-pay').parent().hasClass('active')){
-            my_SaveValue("paymethod","1"); 
-        }else if($('.no-pay').parent().hasClass('active')){ 
-            my_SaveValue("paymethod","2"); 
+            my_SaveValue("paymethod","1");
+        }else if($('.no-pay').parent().hasClass('active')){
+            my_SaveValue("paymethod","2");
         }
     });
 })(jQuery);
 
 function checkIfLogin(){
     var userId=$.cookie('userId');
-    if(!userId){ 
-        location.href="/place.html";//跳到首页
+    if(!userId){
+        location.href="/index.html";//跳到首页
     }
 }
 
 //初始化商家信息
 function initShopInfo(){
     var shopName=shop_GetValue("shopName");
-    if(shopName){ 
+    if(shopName){
         $(".info-place").html(shopName);
     }
 }
 
 //初始化购物车
-function initOrder(){ 
-    var shopId=shop_GetValue("shopId"); 
-    if(shopId){  
+function initOrder(){
+    var shopId=shop_GetValue("shopId");
+    if(shopId){
         var arrObj=selectAll(shopId);
         if(arrObj&&arrObj.length>0){
             var price3=0;
@@ -87,7 +87,7 @@ function initOrder(){
             var htmlTxt="<li class='checkout-tablerow'>"
                 +"<div class='cell itemname'>$name</div>"
                 +"<div class='cell itemquantity'>$count</div>"
-                +"<div class='cell itemtotal'>￥$price</div></li>";  
+                +"<div class='cell itemtotal'>￥$price</div></li>";
             for(var i=0;i<arrObj.length;i++){
                 var itemId=arrObj[i].itemId;
                 var name=hexToString(arrObj[i].name);
@@ -97,18 +97,18 @@ function initOrder(){
                 price3+=price2;
                 count2+=count;
 
-                var newTxt=htmlTxt.replace("$name",name).replace("$count",count).replace("$price",price2); 
+                var newTxt=htmlTxt.replace("$name",name).replace("$count",count).replace("$price",price2);
 
-                $('.checkout-body').append(newTxt); 
+                $('.checkout-body').append(newTxt);
             }
             //合计
-           var newTxt=htmlTxt.replace("$name","合计").replace("$count",count2).replace("$price",price3);  
-                $('.checkout-body').append(newTxt); 
-            
+           var newTxt=htmlTxt.replace("$name","合计").replace("$count",count2).replace("$price",price3);
+                $('.checkout-body').append(newTxt);
+
         }else{
             window.location.href="/shop/"+shopId;
         }
-        
+
     }
 }
 
@@ -121,9 +121,9 @@ function initAddress(){
     var pn=my_GetValue("pn");
     var name=my_GetValue("name");
     var place=my_GetValue("place");
-    var addressDetail=my_GetValue("address-detail"); 
+    var addressDetail=my_GetValue("address-detail");
 
- 
+
     //初始化place选择器
     var shopName=shop_GetValue("shopName");
     if(shopName!=place){//新商家时
@@ -138,31 +138,31 @@ function initAddress(){
     }
 
 
-    if(!pn)return; 
+    if(!pn)return;
     $('#address-name').val(name);
     $('#address-pn').val(pn);
-    $('#place').text(place); 
+    $('#place').text(place);
     $('#address-detail').val(addressDetail);
-    var address=name+" "+pn+" "+place+addressDetail; 
-    $('.address-npa').html(address); 
+    var address=name+" "+pn+" "+place+addressDetail;
+    $('.address-npa').html(address);
     $('.close-reveal-modal').click();
     $('.checkout-address').show();
     $('.checkout-noaddress').hide();
 }
 
-function initPayMethod(){ 
+function initPayMethod(){
         //拿cookie
         var pm=my_GetValue("paymethod");
         if(pm){
             if(pm=="0"){
                 $('.weixin-pay').parent().removeClass('disabled').addClass('active');
-                $('.alipay-pay,.no-pay').parent().removeClass('active').addClass('disabled'); 
+                $('.alipay-pay,.no-pay').parent().removeClass('active').addClass('disabled');
             }else if(pm=="1"){
                 $('.alipay-pay').parent().removeClass('disabled').addClass('active');
                 $('.weixin-pay,.no-pay').parent().removeClass('active').addClass('disabled');
             }else if(pm=="2"){
                 $('.no-pay').parent().removeClass('disabled').addClass('active');
-                $('.weixin-pay,.alipay-pay').parent().removeClass('active').addClass('disabled'); 
+                $('.weixin-pay,.alipay-pay').parent().removeClass('active').addClass('disabled');
             }
         } else{
             $('.weixin-pay').parent().removeClass('disabled').addClass('active');
@@ -174,19 +174,19 @@ function initJifen(){
     var jifen=my_GetValue("jifen");
     $('.jifen-label').text("我的积分："+jifen);
     var xianjin=parseInt(jifen/100,10);
-    $('.jifen-value').text("积分抵现：￥"+xianjin); 
+    $('.jifen-value').text("积分抵现：￥"+xianjin);
 }
 
 //初始化送达时间
 function initArrivedTime(){
-    var myDate = new Date(); 
-    var h=myDate.getHours();     
+    var myDate = new Date();
+    var h=myDate.getHours();
     var m=myDate.getMinutes();
     if(m>=30){
-        h=h+1; 
+        h=h+1;
         $(".select-arrived-time").append("<option value='"+h+":00-"+h+":30' >"+h+":00-"+h+":30</option>");
         $(".select-arrived-time").append("<option value='"+h+":30-"+(h+1)+":00' >"+h+":30-"+(h+1)+":00</option>");
-    } else if(m<30){ 
+    } else if(m<30){
         $(".select-arrived-time").append("<option value='"+h+":30-"+(h+1)+":00' >"+h+":30-"+(h+1)+":00</option>");
         $(".select-arrived-time").append("<option value='"+(h+1)+":00-"+(h+1)+":30' >"+(h+1)+":00-"+(h+1)+":30</option>");
     }
@@ -196,31 +196,31 @@ function initArrivedTime(){
 function initPayPrice(){
     var username=my_GetValue("userId");
     var shopId=shop_GetValue("shopId");
-    if(shopId){  
+    if(shopId){
         var arrObj=selectAll(shopId);
-        if(arrObj&&arrObj.length>0){ 
+        if(arrObj&&arrObj.length>0){
             var itemsTxt=JSON.stringify(arrObj);
-            var postUrl="/ajax/getPayPrice.php";  
-            $.post(postUrl,  
+            var postUrl="/ajax/getPayPrice.php";
+            $.post(postUrl,
                 {
                     username:username,
                     shopId:shopId,
                     itemsTxt:itemsTxt},
-                function(data,status,xhr) {   
-                   if(status=="success"){   
-                        $res= $.parseJSON(data); 
-                        if($res.code=="0"){  
+                function(data,status,xhr) {
+                   if(status=="success"){
+                        $res= $.parseJSON(data);
+                        if($res.code=="0"){
                             //实付
                             $(".checkout-bottom-price").html($res.payPrice);
                         }else if($res.code=="1"){
                            alert("获取实付价格失败,请刷新页面");
-                        } 
+                        }
                    }else{
                         alert("服务器异常,请刷新页面");
                    }
-               }); 
+               });
         }
-    } 
+    }
 }
 
 //保存地址
@@ -229,27 +229,27 @@ function saveAddress(){
     var name=$('#address-name').val().trim();
     var pn=$('#address-pn').val().trim();
     var place=$('#place').text();
-    var addressDetail=$('#address-detail').val().trim(); 
-    
+    var addressDetail=$('#address-detail').val().trim();
+
     $('#error-name,#error-pn,#error-detail').text("");
     //验证合法性
     if(name==""){
         $('#error-name').text("请输入姓名");
         return;
-    } 
+    }
     if(pn==""){
         $('#error-pn').text("请输入手机号");
         return;
-    } 
+    }
     if(addressDetail==""){
         $('#error-detail').text("请输入详细地址");
         return;
     }
 
 
-    address=name+"   "+pn+"   "+place+addressDetail; 
-    
-    $('.address-npa').html(address); 
+    address=name+"   "+pn+"   "+place+addressDetail;
+
+    $('.address-npa').html(address);
     $('.close-reveal-modal').click();
     $('.checkout-noaddress').hide();
     $('.checkout-address').show();
@@ -262,8 +262,8 @@ function saveUserInfo(pn,name,place,addressDetail){
         alert("用户未登录");
         return;
     }
-    var postUrl="/ajax/saveUserInfo.php";  
-    $.post(postUrl,  
+    var postUrl="/ajax/saveUserInfo.php";
+    $.post(postUrl,
         {
             username:$username,
             pn:pn,
@@ -271,29 +271,29 @@ function saveUserInfo(pn,name,place,addressDetail){
             place:place,
             addressDetail:addressDetail
         },
-        function(data,status,xhr) {   
-           if(status=="success"){   
-                $res= $.parseJSON(data); 
-                if($res.code=="0"){ 
+        function(data,status,xhr) {
+           if(status=="success"){
+                $res= $.parseJSON(data);
+                if($res.code=="0"){
                     my_SaveValue("pn",pn);
                     my_SaveValue("name",name);
                     my_SaveValue("place",place);
-                    my_SaveValue("address-detail",addressDetail); 
+                    my_SaveValue("address-detail",addressDetail);
 
                 }else if($res.code=="1"){
                     alert("保存失败");
-                } 
+                }
            }else{
                 alert("服务器异常,请重试");
            }
-       }); 
+       });
 }
 
 //提交订单
-function commitOrder(){ 
+function commitOrder(){
 
     var postUrl="/ajax/commitOrder.php";
-    var username=$.cookie('userId'); 
+    var username=$.cookie('userId');
     var shopId=shop_GetValue("shopId");
     var shopName=shop_GetValue("shopName");
     var shopPhone=shop_GetValue("shopPhone");
@@ -308,14 +308,14 @@ function commitOrder(){
 
     var orderAddress=getAddress(place,block,floor);
     var orderArrivedTime=my_GetValue("orderArrivedTime");
-    var orderRemark=my_GetValue("orderRemark"); 
+    var orderRemark=my_GetValue("orderRemark");
 
 
-    if(shopId){  
+    if(shopId){
         var arrObj=selectAll(shopId);
-        if(arrObj&&arrObj.length>0){ 
-            var itemsTxt=JSON.stringify(arrObj); 
-            $.post(postUrl,  
+        if(arrObj&&arrObj.length>0){
+            var itemsTxt=JSON.stringify(arrObj);
+            $.post(postUrl,
             {
                 username:username,
                 items:itemsTxt,
@@ -330,30 +330,30 @@ function commitOrder(){
                 orderArrivedTime:orderArrivedTime,
                 orderRemark:orderRemark
             },
-            function(data,status,xhr) {    
+            function(data,status,xhr) {
                 console.log("order===data："+data);
-               if(status=="success"){  
-                    $res= $.parseJSON(data); 
-                    if($res.code=="0"){   
+               if(status=="success"){
+                    $res= $.parseJSON(data);
+                    if($res.code=="0"){
                          console.log("order===提交方式："+paymethod);
                          //清空购物车
                          removeAllItem(shopId);
-                          if(paymethod==0){ //微信支付   
+                          if(paymethod==0){ //微信支付
                              window.location.href="/weixinPay.php";//pay.php页才能执行
-                         }else if(paymethod==1){ //支付宝支付 
+                         }else if(paymethod==1){ //支付宝支付
                              window.location.href="/aliPay.php";  //pay.php页才能执行
-                         }else if(paymethod==2){ //餐到付款 
+                         }else if(paymethod==2){ //餐到付款
                             window.location.href="/account/order";
                          }
                     }else if($res.code=="1"){
-                        showAlert($res.msg); 
+                        showAlert($res.msg);
                     }
                }else{
-                    showAlert("服务器异常");  
+                    showAlert("服务器异常");
                }
-           }); 
-        }else{ 
-            showAlert("已提交过该订单","/account/order"); 
+           });
+        }else{
+            showAlert("已提交过该订单","/account/order");
         }
     }
 }

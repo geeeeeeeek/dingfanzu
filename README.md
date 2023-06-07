@@ -4,10 +4,6 @@
 
 ### 运行环境：Apache+PHP+Mysql
 
-### 源码地址
-
-https://github.com/geeeeeeeek/dingfanzu
-
 ### 代码说明
 * htaccess Rewrite配置文件，需要放入到项目根目录
 * configs.php 需要配置数据库连接信息（主机、用户名、密码），系统常量，debug模式等
@@ -17,7 +13,7 @@ https://github.com/geeeeeeeek/dingfanzu
 
 ### 技术架构：后台PHP+Mysql 前台jQuery、html、CSS、Bootstrap
 
-### 网站结构：首页place.html 菜品展示页shop.html 
+### 网站结构：首页index.html 菜品展示页shop.html 
 
 ### 个人中心：我的地址；余额；代金券；订单；我的积分；设置。
 
@@ -40,6 +36,9 @@ https://github.com/geeeeeeeek/dingfanzu
 
 ##### 点餐页面
 ![](https://github.com/geeeeeeeek/dingfanzu/blob/master/images/demo02.png)
+
+##### 后台管理页面
+![](https://github.com/geeeeeeeek/dingfanzu/blob/master/images/demo03.jpg)
 
 
 ### 赞助作者

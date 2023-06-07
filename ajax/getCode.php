@@ -1,5 +1,4 @@
 <?php
-require_once '../taobao-sdk-PHP/sendCode.php';
 
 // 安全验证 (防止恶意调用)
 if(isset($_SESSION['send_count'])){

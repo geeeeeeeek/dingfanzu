@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once '../include.php';
 checkLogined();
 
@@ -9,8 +9,9 @@ $shopId=$_REQUEST['shopId'];
 $where=$shopId?"where shopId='{$shopId}' and (pay=1 or paymethod=2) and received=0 ":null;
 //得到数据库中所有商品
 $sql="select id from dfz_order {$where} ";
+echo $sql;
 $rows=fetchAll($sql);
-if(!$rows){ 
+if(!$rows){
     echo "fail";
 }else{
     echo "success";

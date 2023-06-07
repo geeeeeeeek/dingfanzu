@@ -7,9 +7,9 @@
         <script src="scripts/jquery.cookie.js"></script>
         <link rel=stylesheet href="style/reset.css">
         <link rel=stylesheet href="style/common.css">
-        <link rel=stylesheet href="style/base.css"> 
+        <link rel=stylesheet href="style/base.css">
         <link rel=stylesheet href="style/header.css">
-        <link rel=stylesheet href="style/footer_1.css"> 
+        <link rel=stylesheet href="style/footer_1.css">
         <link rel=stylesheet href="style/reveal.css">
         <link rel=stylesheet href="style/login.css">
         <link rel=stylesheet href="style/weixinPay.css">
@@ -18,7 +18,7 @@
     <body>
         <!--header部分-->
         <div class="header shadow">
-            <div class="search-result"> 
+            <div class="search-result">
             </div>
             <div class="header-left fl">
                 <div class="icon fl"></div>
@@ -26,7 +26,7 @@
                 <a class="logo" href="/"></a>
                 <div class="search">
                 <img class="search-icon" src="/images/icon_search.png" width="22" height="22">
-                <input class="search-input" type="text" placeholder="请输入楼名" onkeypress="onKeySearch()">
+                <input class="search-input" type="text" placeholder="请输入地点" onkeypress="onKeySearch()">
                 </div>
                 <div class="clear"></div>
             </div>
@@ -34,21 +34,21 @@
                 <div class="login fl">
 
                     <span class="header-operater">
-                    <a href="/">外卖</a>
+                    <a href="/">首页</a>
                     <a href="/account/order">我的订单</a>
-                    <a href="/about.html?p=lianxiwomen">联系我们</a> 
-                    </span> 
+                    <a href="/about.html?p=lianxiwomen">联系我们</a>
+                    </span>
                     <a id="header-login" class="navBtn f-radius f-select n" data-reveal-id="myModal" data-animation="fade">
                     登录
                     </a>
                 </div>
-                <div id="cart" class="cart fr"> 
+                <div id="cart" class="cart fr">
                     <img class="cart-icon" src="images/icon_cart_22_22.png">
                 </div>
                 <div id="user" class="user fr n">
-                    <img class="user-icon" src="images/icon_my.png"> 
-                </div> 
-            </div> 
+                    <img class="user-icon" src="images/icon_my.png">
+                </div>
+            </div>
         </div>
         <div class="content-wrap">
             <div class="content">

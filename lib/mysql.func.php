@@ -1,15 +1,15 @@
-<?php 
+<?php
 /**
  * 连接数据库
  * @return resource
  */
 function connect(){
 	$link=mysqli_connect(DB_HOST,DB_USER,DB_PWD,DB_DBNAME) or die("数据库连接失败");
-	mysqli_set_charset($link,DB_CHARSET); 
+	mysqli_set_charset($link,DB_CHARSET);
 	return $link;
 }
 
-/** 
+/**
  * 关闭连接
  */
 function close($link){
@@ -24,14 +24,14 @@ function close($link){
  */
 function insert($table,$array){
 	if(DEBUG){
-		if(strcmp($table,"dfz_user")!=0&&strcmp($table,"dfz_userinfo")!=0){ 
-			exit("无权限，如使用该权限，请联系客服微信（java2048）");
+		if(strcmp($table,"dfz_user")!=0&&strcmp($table,"dfz_userinfo")!=0){
+			exit("无权限，如使用该权限，请联系客服微信（lengqin1024）");
 		}
 	}
 	$link=connect();
 	$keys=join(",",array_keys($array));
 	$vals="'".join("','",array_values($array))."'";
-	$sql="insert into {$table}($keys) values({$vals})";   
+	$sql="insert into {$table}($keys) values({$vals})";
 	mysqli_query($link,$sql);
 	$insertId=mysqli_insert_id($link);//返回id
 	close($link);
@@ -47,7 +47,7 @@ function insert($table,$array){
  */
 function update($table,$array,$where=null){
 	if(DEBUG){
-		exit("无权限，如使用该权限，请联系客服微信（java2048）");
+		exit("无权限，如使用该权限，请联系客服微信（lengqin1024）");
 	}
 	$link=connect();
 	foreach($array as $key=>$val){
@@ -58,7 +58,7 @@ function update($table,$array,$where=null){
 		}
 		$str.=$sep.$key."='".$val."'";
 	}
-		$sql="update {$table} set {$str} ".($where==null?null:" where ".$where); 
+		$sql="update {$table} set {$str} ".($where==null?null:" where ".$where);
 		$result=mysqli_query($link,$sql);
 		//var_dump($result);
 		//var_dump(mysql_affected_rows());exit;
@@ -78,7 +78,7 @@ function update($table,$array,$where=null){
  */
 function delete($table,$where=null){
 	if(DEBUG){
-		exit("无权限，如使用该权限，请联系客服微信（java2048）");
+		exit("无权限，如使用该权限，请联系客服微信（lengqin1024）");
 	}
 	$link=connect();
 	$where=$where==null?null:" where ".$where;
@@ -95,10 +95,10 @@ function delete($table,$where=null){
  * @param string $result_type
  * @return multitype:
  */
-function fetchOne($sql,$result_type=MYSQL_ASSOC){
+function fetchOne($sql,$result_type=MYSQLI_ASSOC){
 	$link=connect();
 	$result=mysqli_query($link,$sql);
-	if($result){ 
+	if($result){
 		$row=mysqli_fetch_array($result,$result_type);
 	}
 	close($link);
@@ -112,14 +112,14 @@ function fetchOne($sql,$result_type=MYSQL_ASSOC){
  * @param string $result_type
  * @return multitype:
  */
-function fetchAll($sql,$result_type=MYSQL_ASSOC){ 
+function fetchAll($sql,$result_type=MYSQLI_ASSOC){
 	$link=connect();
 	$result=mysqli_query($link,$sql);
 	if($result){
 		while(@$row=mysqli_fetch_array($result,$result_type)){
 			$rows[]=$row;
 		}
-	} 
+	}
 	close($link);
 	return $rows;
 }
@@ -129,16 +129,16 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
  * @param unknown_type $sql
  * @return number
  */
-function getResultNum($sql){ 
+function getResultNum($sql){
 	$link=connect();
 	$num=0;
 	$result=mysqli_query($link,$sql);
 	if($result){
 		$num=mysqli_num_rows($result);
-	} 
+	}
 	close($link);
 	return $num;
 }
 
- 
+
 
