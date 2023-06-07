@@ -4,6 +4,10 @@
 
 ### 运行环境：Apache+PHP+Mysql
 
+### 演示地址
+
+http://1.117.171.66:8006/admin
+
 ### 代码说明
 * htaccess Rewrite配置文件，需要放入到项目根目录
 * configs.php 需要配置数据库连接信息（主机、用户名、密码），系统常量，debug模式等
