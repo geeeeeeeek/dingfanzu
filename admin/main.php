@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="../style/bootstrap3-1-1.min.css">
 </head>
 <body width="100%">
 <center>
@@ -40,6 +40,6 @@
 </center>
 
 	<script src="../scripts/jquery-1.8.3.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="../scripts/bootstrap3-2-0.min.js"></script>
 </body>
 </html>
