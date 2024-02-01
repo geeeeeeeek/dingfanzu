@@ -46,7 +46,7 @@ function addPro(){
 	return $mes;
 }
 /**
- *编辑商品
+ *编辑商品 
  * @param int $id
  * @return string
  */
