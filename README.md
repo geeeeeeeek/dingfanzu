@@ -35,6 +35,16 @@
 * scripts 各种js文件
 * style 各种css文件
 
+### 运行步骤
+1. 安装apache
+2. 安装php
+3. 安装mysql 5.7
+4. 将源码复制到apache目录
+5. 配置vhost
+6. 访问
+
+
+
 ### 界面预览
 
 ##### 首页
